@@ -1,0 +1,46 @@
+# AION2-KINA 测试环境 (test.aion2kina.com)
+# 独立部署仓库 fsjsacc/aion2-dokploy-test — 与生产 aion2-dokploy 完全隔离。
+# 架构: CF 橙云 → Traefik (443, websecure) → nginx:80 → app:3001 (wrangler dev --local)
+# 隔离: 独立 Traefik router (aion2-kina-test) + 独立 volume (kina-test-*)，绝不触碰生产容器。
+# D1: 与生产共用同一份种子 (app/init-data)，首次启动由 entrypoint.sh 初始化。
+# 注意: 不要写 container_name —— Dokploy 用 `docker compose -p <project>` 管理。
+
+services:
+  nginx:
+    build:
+      context: ./nginx
+    restart: unless-stopped
+    depends_on:
+      - app
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.aion2-kina-test.rule=Host(`test.aion2kina.com`)"
+      - "traefik.http.routers.aion2-kina-test.entrypoints=websecure"
+      - "traefik.http.routers.aion2-kina-test.tls=true"
+      - "traefik.http.services.aion2-kina-test.loadbalancer.server.port=80"
+
+  app:
+    build:
+      context: ./app
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      # ASSETS 绝对路径 — wrangler dev 从项目根 /app 解析 assets.directory
+      ASSETS: /app/dist/client
+    volumes:
+      - kina-test-state:/app/dist/server/.wrangler/state/v3
+      - kina-test-data:/app/data
+    mem_limit: 3g
+    memswap_limit: 4g
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://localhost:3001/en/').then(r=>{if(!r.ok)throw 1})"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 300s
+
+volumes:
+  kina-test-state:
+    driver: local
+  kina-test-data:
+    driver: local
