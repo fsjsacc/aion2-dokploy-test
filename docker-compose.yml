@@ -28,8 +28,8 @@ services:
       # ASSETS 绝对路径 — wrangler dev 从项目根 /app 解析 assets.directory
       ASSETS: /app/dist/client
     volumes:
-      - kina-test-state:/app/dist/server/.wrangler/state/v3
-      - kina-test-data:/app/data
+      - kina-test-state-v2:/app/dist/server/.wrangler/state/v3
+      - kina-test-data-v2:/app/data
     mem_limit: 3g
     memswap_limit: 4g
     healthcheck:
@@ -40,7 +40,7 @@ services:
       start_period: 300s
 
 volumes:
-  kina-test-state:
+  kina-test-state-v2:
     driver: local
-  kina-test-data:
+  kina-test-data-v2:
     driver: local
