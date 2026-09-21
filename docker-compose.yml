@@ -32,7 +32,7 @@ services:
       ASSETS: /app/dist/client
     volumes:
       - kina-test-state-v2:/app/dist/server/.wrangler/state/v3
-      - kina-test-data-v2:/app/data
+      - bg-data-a:/app/data
     mem_limit: 2g
     memswap_limit: 2560m
     logging:
@@ -88,11 +88,14 @@ services:
   vol-probe:
     image: nginx:alpine
     restart: unless-stopped
-    entrypoint: ["sh", "-c", "printf %s VOLINHERIT-20260921-1789970726729 > /v/vol-inherit-marker.txt.tmp && mv /v/vol-inherit-marker.txt.tmp /v/vol-inherit-marker.txt && echo probe-wrote-marker && sleep 2147483647"]
+    entrypoint: ["sh", "-c", "echo probe-idle; sleep 2147483647"]
     volumes:
       - kina-test-data-v2:/v
 
 volumes:
+  bg-data-a:
+    external: true
+    name: kina-test-7yrpj5_bg-data-a
   bg-data-b:
     external: true
     name: kina-test-7yrpj5_bg-data-b
