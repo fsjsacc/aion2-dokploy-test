@@ -1,6 +1,6 @@
-# AION2-KINA 测试环境 — 蓝绿演练 + 卷继承实验（脚本渲染，勿手改）
+# AION2-KINA 测试环境 — 蓝绿演练 + 卷继承实验 v3（脚本渲染，勿手改）
 # 拓扑: Traefik → edge(唯一真实域名 router) → app-a | app-b（各自独立卷）
-# 每槽另有 canary 假域名 router，用于未接流量时体检 standby。
+# vol-probe 固定挂老 data 卷；仅 leg1 写入标记，之后只 sleep，用于证明"没有重写"。
 # 不要写 container_name：Dokploy 用 docker compose -p <project> 管理。
 
 services:
@@ -85,16 +85,17 @@ services:
       - "traefik.http.routers.aion2-slot-b.tls=true"
       - "traefik.http.services.aion2-slot-b.loadbalancer.server.port=3001"
 
+  vol-probe:
+    image: nginx:alpine
+    restart: unless-stopped
+    entrypoint: ["sh", "-c", "printf %s VOLINHERIT-20260921-1789970337727 > /v/vol-inherit-marker.txt.tmp && mv /v/vol-inherit-marker.txt.tmp /v/vol-inherit-marker.txt && echo probe-wrote-marker && sleep 2147483647"]
+    volumes:
+      - kina-test-data-v2:/v
+
 volumes:
-  bg-data-a:
-    external: true
-    name: kina-test-7yrpj5_bg-data-a
   bg-data-b:
     external: true
     name: kina-test-7yrpj5_bg-data-b
-  bg-state-a:
-    external: true
-    name: kina-test-7yrpj5_bg-state-a
   bg-state-b:
     external: true
     name: kina-test-7yrpj5_bg-state-b
