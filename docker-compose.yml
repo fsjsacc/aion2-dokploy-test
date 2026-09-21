@@ -32,7 +32,7 @@ services:
       ASSETS: /app/dist/client
     volumes:
       - kina-test-state-v2:/app/dist/server/.wrangler/state/v3
-      - bg-data-a:/app/data
+      - kina-test-data-v2:/app/data
     mem_limit: 2g
     memswap_limit: 2560m
     logging:
@@ -93,9 +93,6 @@ services:
       - kina-test-data-v2:/v
 
 volumes:
-  bg-data-a:
-    external: true
-    name: kina-test-7yrpj5_bg-data-a
   bg-data-b:
     external: true
     name: kina-test-7yrpj5_bg-data-b
