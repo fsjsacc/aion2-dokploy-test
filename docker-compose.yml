@@ -1,7 +1,12 @@
-# AION2-KINA 测试环境 — 蓝绿演练 + 卷继承实验 v3（脚本渲染，勿手改）
-# 拓扑: Traefik → edge(唯一真实域名 router) → app-a | app-b（各自独立卷）
-# vol-probe 固定挂老 data 卷；仅 leg1 写入标记，之后只 sleep，用于证明"没有重写"。
-# 不要写 container_name：Dokploy 用 docker compose -p <project> 管理。
+# AION2-KINA 测试环境 — 蓝绿演练拓扑（分支 rh/bluegreen）
+# 目的：在只碰 test 的前提下实测两件事：
+#   ① 部署时只改 standby 的 dist，live 槽是否不被重建（镜像 id 不变即不重建）；
+#   ② 翻转 edge 的 UPSTREAM_HOST 造成多少秒可见抖动。
+# 架构: CF 橙云 → Traefik (443) → edge(nginx, 唯一 router) → app-a | app-b
+# 隔离: 两个 app 槽各持独立卷（回退会连带回退后台数据，已确认接受）；
+#       每槽另挂 canary router（内部假域名）用于「不接生产流量也能体检 standby」。
+# 注意: 不要写 container_name —— Dokploy 用 `docker compose -p <project>` 管理。
+#       服务名 app-a / app-b 在同一 compose 网络内天然可解析，故 upstream 用服务名。
 
 services:
   edge:
@@ -12,7 +17,9 @@ services:
       - app-a
       - app-b
     environment:
+      # 唯一被允许做 envsubst 的变量前缀，保住 nginx 自带的 $host/$remote_addr 等
       NGINX_ENVSUBST_FILTER: "UPSTREAM_"
+      # 切换 = 改这一行然后只部署 edge（app 槽不重启）
       UPSTREAM_HOST: app-a
     labels:
       - "traefik.enable=true"
@@ -31,8 +38,8 @@ services:
     environment:
       ASSETS: /app/dist/client
     volumes:
-      - kina-test-state-v2:/app/dist/server/.wrangler/state/v3
-      - kina-test-data-v2:/app/data
+      - bg-state-a:/app/dist/server/.wrangler/state/v3
+      - bg-data-a:/app/data
     mem_limit: 2g
     memswap_limit: 2560m
     logging:
@@ -47,6 +54,7 @@ services:
       retries: 3
       start_period: 300s
     labels:
+      # canary：仅内部域名可达，用来在 standby 未接流量时体检它（curl --resolve 到机器 IP）
       - "traefik.enable=true"
       - "traefik.http.routers.aion2-slot-a.rule=Host(`aion2-slot-a.local`)"
       - "traefik.http.routers.aion2-slot-a.entrypoints=websecure"
@@ -85,23 +93,12 @@ services:
       - "traefik.http.routers.aion2-slot-b.tls=true"
       - "traefik.http.services.aion2-slot-b.loadbalancer.server.port=3001"
 
-  vol-probe:
-    image: nginx:alpine
-    restart: unless-stopped
-    entrypoint: ["sh", "-c", "echo probe-idle; sleep 2147483647"]
-    volumes:
-      - kina-test-data-v2:/v
-
 volumes:
-  bg-data-b:
-    external: true
-    name: kina-test-7yrpj5_bg-data-b
+  bg-state-a:
+    driver: local
+  bg-data-a:
+    driver: local
   bg-state-b:
-    external: true
-    name: kina-test-7yrpj5_bg-state-b
-  kina-test-data-v2:
-    external: true
-    name: kina-test-7yrpj5_kina-test-data-v2
-  kina-test-state-v2:
-    external: true
-    name: kina-test-7yrpj5_kina-test-state-v2
+    driver: local
+  bg-data-b:
+    driver: local
