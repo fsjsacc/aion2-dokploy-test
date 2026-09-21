@@ -1,17 +1,26 @@
-# AION2-KINA 测试环境 (test.aion2kina.com)
-# 独立部署仓库 fsjsacc/aion2-dokploy-test — 与生产 aion2-dokploy 完全隔离。
-# 架构: CF 橙云 → Traefik (443, websecure) → nginx:80 → app:3001 (wrangler dev --local)
-# 隔离: 独立 Traefik router (aion2-kina-test) + 独立 volume (kina-test-*)，绝不触碰生产容器。
-# D1: 与生产共用同一份种子 (app/init-data)，首次启动由 entrypoint.sh 初始化。
+# AION2-KINA 测试环境 — 蓝绿演练拓扑（分支 rh/bluegreen）
+# 目的：在只碰 test 的前提下实测两件事：
+#   ① 部署时只改 standby 的 dist，live 槽是否不被重建（镜像 id 不变即不重建）；
+#   ② 翻转 edge 的 UPSTREAM_HOST 造成多少秒可见抖动。
+# 架构: CF 橙云 → Traefik (443) → edge(nginx, 唯一 router) → app-a | app-b
+# 隔离: 两个 app 槽各持独立卷（回退会连带回退后台数据，已确认接受）；
+#       每槽另挂 canary router（内部假域名）用于「不接生产流量也能体检 standby」。
 # 注意: 不要写 container_name —— Dokploy 用 `docker compose -p <project>` 管理。
+#       服务名 app-a / app-b 在同一 compose 网络内天然可解析，故 upstream 用服务名。
 
 services:
-  nginx:
+  edge:
     build:
-      context: ./nginx
+      context: ./edge
     restart: unless-stopped
     depends_on:
-      - app
+      - app-a
+      - app-b
+    environment:
+      # 唯一被允许做 envsubst 的变量前缀，保住 nginx 自带的 $host/$remote_addr 等
+      NGINX_ENVSUBST_FILTER: "UPSTREAM_"
+      # 切换 = 改这一行然后只部署 edge（app 槽不重启）
+      UPSTREAM_HOST: app-a
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.aion2-kina-test.rule=Host(`test.aion2kina.com`)"
@@ -19,28 +28,77 @@ services:
       - "traefik.http.routers.aion2-kina-test.tls=true"
       - "traefik.http.services.aion2-kina-test.loadbalancer.server.port=80"
 
-  app:
+  app-a:
     build:
       context: ./app
+      args:
+        SLOT_DIST: dist-a
     restart: unless-stopped
     env_file: .env
     environment:
-      # ASSETS 绝对路径 — wrangler dev 从项目根 /app 解析 assets.directory
       ASSETS: /app/dist/client
     volumes:
-      - kina-test-state-v2:/app/dist/server/.wrangler/state/v3
-      - kina-test-data-v2:/app/data
-    mem_limit: 3g
-    memswap_limit: 4g
+      - bg-state-a:/app/dist/server/.wrangler/state/v3
+      - bg-data-a:/app/data
+    mem_limit: 2g
+    memswap_limit: 2560m
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
     healthcheck:
       test: ["CMD", "node", "-e", "fetch('http://localhost:3001/en/').then(r=>{if(!r.ok)throw 1})"]
       interval: 30s
       timeout: 10s
       retries: 3
       start_period: 300s
+    labels:
+      # canary：仅内部域名可达，用来在 standby 未接流量时体检它（curl --resolve 到机器 IP）
+      - "traefik.enable=true"
+      - "traefik.http.routers.aion2-slot-a.rule=Host(`aion2-slot-a.local`)"
+      - "traefik.http.routers.aion2-slot-a.entrypoints=websecure"
+      - "traefik.http.routers.aion2-slot-a.tls=true"
+      - "traefik.http.services.aion2-slot-a.loadbalancer.server.port=3001"
+
+  app-b:
+    build:
+      context: ./app
+      args:
+        SLOT_DIST: dist-b
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      ASSETS: /app/dist/client
+    volumes:
+      - bg-state-b:/app/dist/server/.wrangler/state/v3
+      - bg-data-b:/app/data
+    mem_limit: 2g
+    memswap_limit: 2560m
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://localhost:3001/en/').then(r=>{if(!r.ok)throw 1})"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 300s
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.aion2-slot-b.rule=Host(`aion2-slot-b.local`)"
+      - "traefik.http.routers.aion2-slot-b.entrypoints=websecure"
+      - "traefik.http.routers.aion2-slot-b.tls=true"
+      - "traefik.http.services.aion2-slot-b.loadbalancer.server.port=3001"
 
 volumes:
-  kina-test-state-v2:
+  bg-state-a:
     driver: local
-  kina-test-data-v2:
+  bg-data-a:
+    driver: local
+  bg-state-b:
+    driver: local
+  bg-data-b:
     driver: local

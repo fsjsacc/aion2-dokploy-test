@@ -4,10 +4,13 @@ WORKDIR /app
 
 # Install dependencies
 COPY package.json package-lock.json ./
-RUN echo "REBUILD_20260918_0001" && npm ci --no-audit --no-fund 2>&1 | tail -5
+RUN echo "REBUILD_20260921_bg1" && npm ci --no-audit --no-fund 2>&1 | tail -5
 
-# Copy pre-built dist/ (synced from source repo before deploy)
-COPY dist/ ./dist/
+# Blue-green rehearsal: each slot builds from its own dist directory.
+# The live slot's SLOT_DIST is left untouched by a deploy, so its image id stays
+# identical and docker compose must not recreate it.
+ARG SLOT_DIST=dist-a
+COPY ${SLOT_DIST}/ ./dist/
 
 # Copy map assets (tiles, sprites) — these are pruned from dist/client/ by postbuild
 # but needed for the ASSETS binding to serve them in wrangler dev --local mode
@@ -23,7 +26,7 @@ RUN chmod +x /app/entrypoint.sh
 # Create directories
 RUN mkdir -p dist/server/.wrangler/state/v3 dist/server/.wrangler/tmp data
 
-# Fix wrangler.json assets.directory at build time (2026-09-17 18:30 rebuild)
+# Fix wrangler.json assets.directory at build time
 # wrangler dev resolves assets.directory from project root (WORKDIR), not from wrangler.json location
 RUN node -e "\
   const fs = require('fs'); \
@@ -40,7 +43,7 @@ RUN node -e "\
 
 EXPOSE 3001
 
-HEALTHCHECK --interval=30s --timeout=10s --retries=3 \
+HEALTHCHECK --interval=30s --timeout=10s --retries=3 --start-period=300s \
   CMD node -e "fetch('http://localhost:3001/en/').then(r=>{if(!r.ok)throw 1})" || exit 1
 
 ENTRYPOINT ["/app/entrypoint.sh"]
