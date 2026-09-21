@@ -88,7 +88,7 @@ services:
   vol-probe:
     image: nginx:alpine
     restart: unless-stopped
-    entrypoint: ["sh", "-c", "echo probe-idle; sleep 2147483647"]
+    entrypoint: ["sh", "-c", "printf %s VOLINHERIT-20260921-1789970726729 > /v/vol-inherit-marker.txt.tmp && mv /v/vol-inherit-marker.txt.tmp /v/vol-inherit-marker.txt && echo probe-wrote-marker && sleep 2147483647"]
     volumes:
       - kina-test-data-v2:/v
 
