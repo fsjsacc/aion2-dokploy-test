@@ -11641,7 +11641,7 @@ var client_references_default = {
 		} };
 	},
 	"14b6a051c341": async () => {
-		const m = await import("./assets/CraftingRecipeCalculator-BOrw3kIl.js");
+		const m = await import("./assets/CraftingRecipeCalculator-Cn3KQ-tf.js");
 		return { get "CraftingRecipeCalculator"() {
 			return m["CraftingRecipeCalculator"];
 		} };

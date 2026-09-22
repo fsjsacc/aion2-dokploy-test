@@ -112,10 +112,10 @@ var catalog_default = {
 			"kind": "official-catalog",
 			"publisher": "NCSOFT",
 			"sourceUrl": "https://tw.ncsoft.com/aion2/info/item",
-			"snapshotDate": "2026-07-19",
-			"retrievedAt": "2026-07-19T07:24:23.583Z",
-			"versionKey": "sha256-7c8a600786ed4f3eb1cf5354378029065ad35c5af2a70e558b53032937d8520e",
-			"sha256": "7c8a600786ed4f3eb1cf5354378029065ad35c5af2a70e558b53032937d8520e"
+			"snapshotDate": "2026-09-22",
+			"retrievedAt": "2026-09-22T09:49:59.792Z",
+			"versionKey": "sha256-faa1942106a8e6edc6506ada3951784be67084c51af1f8d7a180d2315159c8e1",
+			"sha256": "faa1942106a8e6edc6506ada3951784be67084c51af1f8d7a180d2315159c8e1"
 		},
 		"outputQuantity": {
 			"status": "unknown",
@@ -57162,8 +57162,8 @@ var catalog_default = {
 			]
 		}
 	],
-	checksum: "2ccf5df8ffb0a9dd311dd4bb13949893af042233a6c2c8766268cb87ee5b8441",
-	versionKey: "sha256-2ccf5df8ffb0a9dd311dd4bb13949893af042233a6c2c8766268cb87ee5b8441"
+	checksum: "24d59d6aff3fff72d893bbf7c13bc0b05a6a381fcc5503235ee962e3660b32f0",
+	versionKey: "sha256-24d59d6aff3fff72d893bbf7c13bc0b05a6a381fcc5503235ee962e3660b32f0"
 };
 //#endregion
 //#region app/crafting-catalog.ts

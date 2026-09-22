@@ -1,4 +1,4 @@
-globalThis.__VINEXT_LAZY_CHUNKS__ = ["assets/AnalyticsLink-BHmMNYMd.js","assets/ContentDetail.module-CMHp7jpE.js","assets/FeedbackReportDialog-DIP9ISJ4.js","assets/Icon-qQFp1qJC.js","assets/SiteThemeContext-DipwXgG4.js","assets/analytics-CZoFoCGX.js","assets/checklist-activities-yMgubnYD.js","assets/checklist-store-Rd2v7OSi.js","assets/chevron-down-BHbtqjZL.js","assets/chevron-left-DZHz659I.js","assets/chevron-right-sgnk1bbf.js","assets/circle-check-odA_2sqi.js","assets/createLucideIcon-CMFDOTkM.js","assets/earth-OPJLV7VC.js","assets/external-link-BauUgNq1.js","assets/i18n-CoFUaaYv.js","assets/link-2-vurHjNPY.js","assets/loader-circle-V2K0OmwX.js","assets/navigation-1E82WH8G.js","assets/package-search-CQIsQBaB.js","assets/refresh-cw-BA1voVGC.js","assets/rotate-ccw-Bg4-J3UE.js","assets/server-DxdKEQCK.js","assets/share-2-DUAsq8b8.js","assets/shield-check-Ba2ekw6a.js","assets/site-config-CNqXL_xA.js","assets/sliders-horizontal-Dw6vuFId.js","assets/trash-2-z_gWhoWu.js","assets/triangle-alert-CppHVKka.js","assets/x-CwK0Lzgg.js","assets/GlobalStyles-Bek6_vxn.js","assets/AnalyticsConsentManager-BewN2YXA.js","assets/DeferredAnalyticsConsentManager-DxAQA-fi.js","assets/CopyCodeButton-DjCPWLui.js","assets/ContentFaqList-DjxVlbl3.js","assets/ContentPrimaryAction-CtR_0U3c.js","assets/ContentSectionLinks-BdSpE-K7.js","assets/ItemCatalog-P1TU_8pB.js","assets/OfficialItemDetail-DWMKcqRg.js","assets/GlobalLaunchCountdown-B0Z8dDiZ.js","assets/HomeChecklistCard-Cp_riERj.js","assets/HomeInteractiveShell-B-EUZ5Ty.js","assets/HomeThemeSwitcher-CyLxDdZ2.js","assets/HomeTrackedLink-DCMTGE9G.js","assets/NotFoundRedirect-yFRWLFeA.js","assets/SiteShell-Bez5_A5O.js","assets/ClassFinder-C8k97iAV.js","assets/CraftingDirectory-CwgQmst3.js","assets/CraftingRecipeCalculator-fhuVmQPc.js","assets/DailyChecklist-CQw3Tup1.js","assets/EventTimer-BhoVDy7-.js","assets/MaterialCalculator-Dz3SmTJJ.js","assets/ToolDirectory-CyHuThap.js","assets/ProvenancePanel-gvqR8KmK.js","assets/AdminDashboard-5tl9AaiK.js","assets/AdminEmailLogin-D0i6R5XD.js","assets/InteractiveMap-C6HR6lwV.js","assets/MapExperience-tBmY-mSO.js","assets/maplibre-gl-BaBEctMY.js","assets/layout-segment-context-Hbwd8uvt.js","assets/link-CGx4QCcY.js","assets/router-rBfCE_GF.js"];
+globalThis.__VINEXT_LAZY_CHUNKS__ = ["assets/AnalyticsLink-BHmMNYMd.js","assets/ContentDetail.module-CMHp7jpE.js","assets/FeedbackReportDialog-DIP9ISJ4.js","assets/Icon-qQFp1qJC.js","assets/SiteThemeContext-DipwXgG4.js","assets/analytics-CZoFoCGX.js","assets/checklist-activities-yMgubnYD.js","assets/checklist-store-Rd2v7OSi.js","assets/chevron-down-BHbtqjZL.js","assets/chevron-left-DZHz659I.js","assets/chevron-right-sgnk1bbf.js","assets/circle-check-odA_2sqi.js","assets/createLucideIcon-CMFDOTkM.js","assets/earth-OPJLV7VC.js","assets/external-link-BauUgNq1.js","assets/i18n-CoFUaaYv.js","assets/link-2-vurHjNPY.js","assets/loader-circle-V2K0OmwX.js","assets/navigation-1E82WH8G.js","assets/package-search-CQIsQBaB.js","assets/refresh-cw-BA1voVGC.js","assets/rotate-ccw-Bg4-J3UE.js","assets/server-DxdKEQCK.js","assets/share-2-DUAsq8b8.js","assets/shield-check-Ba2ekw6a.js","assets/site-config-CNqXL_xA.js","assets/sliders-horizontal-Dw6vuFId.js","assets/trash-2-z_gWhoWu.js","assets/triangle-alert-CppHVKka.js","assets/x-CwK0Lzgg.js","assets/GlobalStyles-Bek6_vxn.js","assets/AnalyticsConsentManager-BewN2YXA.js","assets/DeferredAnalyticsConsentManager-C4TMnSC0.js","assets/CopyCodeButton-DjCPWLui.js","assets/ContentFaqList-DjxVlbl3.js","assets/ContentPrimaryAction-CtR_0U3c.js","assets/ContentSectionLinks-BdSpE-K7.js","assets/ItemCatalog-P1TU_8pB.js","assets/OfficialItemDetail-DWMKcqRg.js","assets/GlobalLaunchCountdown-B0Z8dDiZ.js","assets/HomeChecklistCard-Cp_riERj.js","assets/HomeInteractiveShell-DcWy1QqA.js","assets/HomeThemeSwitcher-CyLxDdZ2.js","assets/HomeTrackedLink-DCMTGE9G.js","assets/NotFoundRedirect-yFRWLFeA.js","assets/SiteShell-xwzgPhFP.js","assets/ClassFinder-C8k97iAV.js","assets/CraftingDirectory-CwgQmst3.js","assets/CraftingRecipeCalculator-CcxFbeUV.js","assets/DailyChecklist-CQw3Tup1.js","assets/EventTimer-BhoVDy7-.js","assets/MaterialCalculator-Dz3SmTJJ.js","assets/ToolDirectory-CyHuThap.js","assets/ProvenancePanel-gvqR8KmK.js","assets/AdminDashboard-DYB5GZc_.js","assets/AdminEmailLogin-D0p8RfAw.js","assets/InteractiveMap-IBwEWFca.js","assets/MapExperience-Dgwc86yB.js","assets/maplibre-gl-BaBEctMY.js","assets/layout-segment-context-0Z15fNKI.js","assets/link-CiOMhzCz.js","assets/router-B0yFt4dP.js"];
 import * as __viteRscAsyncHooks from "node:async_hooks";
 import { AsyncLocalStorage as AsyncLocalStorage$1 } from "node:async_hooks";
 import assetsManifest from "./__vite_rsc_assets_manifest.js";
@@ -5886,7 +5886,7 @@ function getAndClearPendingCookies() {
 var DRAFT_MODE_COOKIE = "__prerender_bypass";
 (/* @__PURE__ */ new Date(0)).toUTCString();
 function getDraftSecret() {
-	return "c5660518-0e77-45a3-9299-78eba4c54e40";
+	return "8da3f0fc-e451-4fa3-a7a7-0f1a18fd6dc0";
 }
 /**
 * Get any Set-Cookie header generated by draftMode().enable()/disable().
@@ -7799,7 +7799,7 @@ var NextURL = class NextURL {
 	* Matches the Next.js API: `request.nextUrl.buildId`.
 	*/
 	get buildId() {
-		return "b800f2d6-c9c6-44c0-b8db-780e24733b8d";
+		return "4ae401a6-3962-4258-9eb6-c69926329506";
 	}
 };
 var RequestCookies = class {
@@ -12921,7 +12921,7 @@ function buildCacheKey(prefix, pathname, suffix) {
 * The suffix mirrors Next.js's separate on-disk app artifacts while keeping the
 * Cloudflare KV key under its 512-byte limit for long pathnames.
 */
-function appIsrCacheKey(pathname, suffix, buildId = "b800f2d6-c9c6-44c0-b8db-780e24733b8d") {
+function appIsrCacheKey(pathname, suffix, buildId = "4ae401a6-3962-4258-9eb6-c69926329506") {
 	return buildCacheKey(buildId ? `app:${buildId}` : "app", pathname, suffix);
 }
 function appIsrHtmlKey(pathname) {
@@ -13250,7 +13250,7 @@ function createAppPageArtifactCompatibility(element, routePattern) {
 			routePattern,
 			rootBoundaryId
 		}),
-		deploymentVersion: "b800f2d6-c9c6-44c0-b8db-780e24733b8d",
+		deploymentVersion: "4ae401a6-3962-4258-9eb6-c69926329506",
 		rootBoundaryId
 	});
 }
@@ -16993,10 +16993,10 @@ var catalog_default = {
 			"kind": "official-catalog",
 			"publisher": "NCSOFT",
 			"sourceUrl": "https://tw.ncsoft.com/aion2/info/item",
-			"snapshotDate": "2026-07-19",
-			"retrievedAt": "2026-07-19T07:24:23.583Z",
-			"versionKey": "sha256-7c8a600786ed4f3eb1cf5354378029065ad35c5af2a70e558b53032937d8520e",
-			"sha256": "7c8a600786ed4f3eb1cf5354378029065ad35c5af2a70e558b53032937d8520e"
+			"snapshotDate": "2026-09-22",
+			"retrievedAt": "2026-09-22T09:49:59.792Z",
+			"versionKey": "sha256-faa1942106a8e6edc6506ada3951784be67084c51af1f8d7a180d2315159c8e1",
+			"sha256": "faa1942106a8e6edc6506ada3951784be67084c51af1f8d7a180d2315159c8e1"
 		},
 		"outputQuantity": {
 			"status": "unknown",
@@ -74043,8 +74043,8 @@ var catalog_default = {
 			]
 		}
 	],
-	checksum: "2ccf5df8ffb0a9dd311dd4bb13949893af042233a6c2c8766268cb87ee5b8441",
-	versionKey: "sha256-2ccf5df8ffb0a9dd311dd4bb13949893af042233a6c2c8766268cb87ee5b8441"
+	checksum: "24d59d6aff3fff72d893bbf7c13bc0b05a6a381fcc5503235ee962e3660b32f0",
+	versionKey: "sha256-24d59d6aff3fff72d893bbf7c13bc0b05a6a381fcc5503235ee962e3660b32f0"
 };
 //#endregion
 //#region app/crafting-catalog.ts
@@ -180957,11 +180957,11 @@ var item_catalog_bootstrap_default = {
 	schemaVersion: 1,
 	publisher: "NCSOFT",
 	sourceUrl: "https://tw.ncsoft.com/aion2/info/item",
-	snapshotDate: "2026-07-19",
-	retrievedAt: "2026-07-19T07:24:23.583Z",
-	total: 10910,
-	checksum: "7c8a600786ed4f3eb1cf5354378029065ad35c5af2a70e558b53032937d8520e",
-	versionKey: "sha256-7c8a600786ed4f3eb1cf5354378029065ad35c5af2a70e558b53032937d8520e",
+	snapshotDate: "2026-09-22",
+	retrievedAt: "2026-09-22T09:49:59.792Z",
+	total: 11221,
+	checksum: "faa1942106a8e6edc6506ada3951784be67084c51af1f8d7a180d2315159c8e1",
+	versionKey: "sha256-faa1942106a8e6edc6506ada3951784be67084c51af1f8d7a180d2315159c8e1",
 	itemsByLocale: /* @__PURE__ */ JSON.parse("{\"zh-hant\":[{\"id\":\"110120001\",\"name\":\"應龍王巨劍\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0110_T05.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"英雄\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"巨劍\",\"optionLines\":[\"暴擊 150\",\"PVE傷害增幅 5%\",\"命中 100\",\"格擋 150\",\"攻擊力 463 ~ 627\"],\"classIds\":[\"gladiator\"],\"tradable\":true,\"officialUrl\":\"https://tw.ncsoft.com/aion2/info/item?detail=item_110120001_0_0\",\"detailSlug\":null},{\"id\":\"110120002\",\"name\":\"夔龍王巨劍\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0110_T05.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"英雄\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"巨劍\",\"optionLines\":[\"暴擊 150\",\"PVE傷害增幅 5%\",\"命中 100\",\"格擋 150\",\"攻擊力 463 ~ 627\"],\"classIds\":[\"gladiator\"],\"tradable\":true,\"officialUrl\":\"https://tw.ncsoft.com/aion2/info/item?detail=item_110120002_0_0\",\"detailSlug\":null},{\"id\":\"110120003\",\"name\":\"盧德萊絕滅刀\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0108_T06.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"英雄\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"巨劍\",\"optionLines\":[\"暴擊 150\",\"命中 100\",\"格擋 150\",\"攻擊力 421 ~ 569\"],\"classIds\":[\"gladiator\"],\"tradable\":false,\"officialUrl\":\"https://tw.ncsoft.com/aion2/info/item?detail=item_110120003_0_0\",\"detailSlug\":null},{\"id\":\"110120004\",\"name\":\"守衛者軍團長巨劍\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_Moon_01.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"英雄\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"巨劍\",\"optionLines\":[\"暴擊 150\",\"PVP傷害增幅 10%\",\"命中 100\",\"格擋 150\",\"攻擊力 463 ~ 627\"],\"classIds\":[\"gladiator\"],\"tradable\":false,\"officialUrl\":\"https://tw.ncsoft.com/aion2/info/item?detail=item_110120004_0_0\",\"detailSlug\":null},{\"id\":\"110120005\",\"name\":\"執政官軍團長巨劍\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_Moon_01.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"英雄\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"巨劍\",\"optionLines\":[\"暴擊 150\",\"PVP傷害增幅 10%\",\"命中 100\",\"格擋 150\",\"攻擊力 463 ~ 627\"],\"classIds\":[\"gladiator\"],\"tradable\":false,\"officialUrl\":\"https://tw.ncsoft.com/aion2/info/item?detail=item_110120005_0_0\",\"detailSlug\":null},{\"id\":\"110120006\",\"name\":\"閃耀的應龍王巨劍\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0110_T05.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"英雄\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"巨劍\",\"optionLines\":[\"暴擊 150\",\"PVE傷害增幅 5%\",\"命中 100\",\"攻擊力 489 ~ 661\",\"格擋 150\"],\"classIds\":[\"gladiator\"],\"tradable\":true,\"officialUrl\":\"https://tw.ncsoft.com/aion2/info/item?detail=item_110120006_0_0\",\"detailSlug\":null},{\"id\":\"110120007\",\"name\":\"閃耀的夔龍王巨劍\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0110_T05.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"英雄\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"巨劍\",\"optionLines\":[\"暴擊 150\",\"PVE傷害增幅 5%\",\"命中 100\",\"攻擊力 489 ~ 661\",\"格擋 150\"],\"classIds\":[\"gladiator\"],\"tradable\":true,\"officialUrl\":\"https://tw.ncsoft.com/aion2/info/item?detail=item_110120007_0_0\",\"detailSlug\":null},{\"id\":\"110120012\",\"name\":\"精銳守衛者軍團長巨劍\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_Moon_01.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"英雄\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"巨劍\",\"optionLines\":[\"暴擊 150\",\"PVP傷害增幅 10%\",\"命中 100\",\"格擋 150\",\"攻擊力 463 ~ 627\"],\"classIds\":[\"gladiator\"],\"tradable\":false,\"officialUrl\":\"https://tw.ncsoft.com/aion2/info/item?detail=item_110120012_0_0\",\"detailSlug\":null},{\"id\":\"110120013\",\"name\":\"精銳執政官軍團長巨劍\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_Moon_01.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"英雄\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"巨劍\",\"optionLines\":[\"暴擊 150\",\"PVP傷害增幅 10%\",\"命中 100\",\"格擋 150\",\"攻擊力 463 ~ 627\"],\"classIds\":[\"gladiator\"],\"tradable\":false,\"officialUrl\":\"https://tw.ncsoft.com/aion2/info/item?detail=item_110120013_0_0\",\"detailSlug\":null},{\"id\":\"110120014\",\"name\":\"盧德萊絕滅刀\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0108_T06.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"英雄\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"巨劍\",\"optionLines\":[\"暴擊 150\",\"命中 100\",\"格擋 150\",\"攻擊力 421 ~ 569\"],\"classIds\":[\"gladiator\"],\"tradable\":true,\"officialUrl\":\"https://tw.ncsoft.com/aion2/info/item?detail=item_110120014_0_0\",\"detailSlug\":null},{\"id\":\"110120015\",\"name\":\"被侵蝕的支配者捕食巨劍\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_Dream_01.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"英雄\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"巨劍\",\"optionLines\":[\"暴擊 150\",\"命中 100\",\"格擋 150\",\"攻擊力 463 ~ 627\"],\"classIds\":[\"gladiator\"],\"tradable\":false,\"officialUrl\":\"https://tw.ncsoft.com/aion2/info/item?detail=item_110120015_0_0\",\"detailSlug\":null},{\"id\":\"110120016\",\"name\":\"被侵蝕的支配者捕食巨劍\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_Dream_01.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"英雄\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"巨劍\",\"optionLines\":[\"暴擊 150\",\"命中 100\",\"格擋 150\",\"攻擊力 463 ~ 627\"],\"classIds\":[\"gladiator\"],\"tradable\":true,\"officialUrl\":\"https://tw.ncsoft.com/aion2/info/item?detail=item_110120016_0_0\",\"detailSlug\":null},{\"id\":\"110120017\",\"name\":\"創龍王巨劍\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0117_T05.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"英雄\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"巨劍\",\"optionLines\":[\"暴擊 150\",\"PVE傷害增幅 5%\",\"命中 100\",\"格擋 150\",\"攻擊力 548 ~ 742\"],\"classIds\":[\"gladiator\"],\"tradable\":true,\"officialUrl\":\"https://tw.ncsoft.com/aion2/info/item?detail=item_110120017_0_0\",\"detailSlug\":null},{\"id\":\"110120018\",\"name\":\"滅龍王巨劍\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0117_T05.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"英雄\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"巨劍\",\"optionLines\":[\"暴擊 150\",\"PVE傷害增幅 5%\",\"命中 100\",\"格擋 150\",\"攻擊力 548 ~ 742\"],\"classIds\":[\"gladiator\"],\"tradable\":true,\"officialUrl\":\"https://tw.ncsoft.com/aion2/info/item?detail=item_110120018_0_0\",\"detailSlug\":null},{\"id\":\"110120019\",\"name\":\"閃耀的創龍王巨劍\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0117_T05.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"英雄\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"巨劍\",\"optionLines\":[\"暴擊 150\",\"PVE傷害增幅 5%\",\"命中 100\",\"格擋 150\",\"攻擊力 574 ~ 776\"],\"classIds\":[\"gladiator\"],\"tradable\":true,\"officialUrl\":\"https://tw.ncsoft.com/aion2/info/item?detail=item_110120019_0_0\",\"detailSlug\":null},{\"id\":\"110120020\",\"name\":\"閃耀的滅龍王巨劍\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0117_T05.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"英雄\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"巨劍\",\"optionLines\":[\"暴擊 150\",\"PVE傷害增幅 5%\",\"命中 100\",\"格擋 150\",\"攻擊力 574 ~ 776\"],\"classIds\":[\"gladiator\"],\"tradable\":true,\"officialUrl\":\"https://tw.ncsoft.com/aion2/info/item?detail=item_110120020_0_0\",\"detailSlug\":null},{\"id\":\"110120021\",\"name\":\"應龍王巨劍\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0110_T05.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"英雄\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"巨劍\",\"optionLines\":[\"暴擊 150\",\"PVE傷害增幅 5%\",\"命中 100\",\"格擋 150\",\"攻擊力 463 ~ 627\"],\"classIds\":[\"gladiator\"],\"tradable\":false,\"officialUrl\":\"https://tw.ncsoft.com/aion2/info/item?detail=item_110120021_0_0\",\"detailSlug\":null},{\"id\":\"110120022\",\"name\":\"夔龍王巨劍\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0110_T05.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"英雄\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"巨劍\",\"optionLines\":[\"暴擊 150\",\"PVE傷害增幅 5%\",\"命中 100\",\"格擋 150\",\"攻擊力 463 ~ 627\"],\"classIds\":[\"gladiator\"],\"tradable\":false,\"officialUrl\":\"https://tw.ncsoft.com/aion2/info/item?detail=item_110120022_0_0\",\"detailSlug\":null},{\"id\":\"110120023\",\"name\":\"閃耀的應龍王巨劍\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0110_T05.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"英雄\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"巨劍\",\"optionLines\":[\"暴擊 150\",\"PVE傷害增幅 5%\",\"命中 100\",\"攻擊力 489 ~ 661\",\"格擋 150\"],\"classIds\":[\"gladiator\"],\"tradable\":false,\"officialUrl\":\"https://tw.ncsoft.com/aion2/info/item?detail=item_110120023_0_0\",\"detailSlug\":null},{\"id\":\"110120024\",\"name\":\"閃耀的夔龍王巨劍\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0110_T05.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"英雄\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"巨劍\",\"optionLines\":[\"暴擊 150\",\"PVE傷害增幅 5%\",\"命中 100\",\"攻擊力 489 ~ 661\",\"格擋 150\"],\"classIds\":[\"gladiator\"],\"tradable\":false,\"officialUrl\":\"https://tw.ncsoft.com/aion2/info/item?detail=item_110120024_0_0\",\"detailSlug\":null}],\"en\":[{\"id\":\"110120001\",\"name\":\"Noble Dragon Lord Greatsword\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0110_T05.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"Heroic\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"Greatsword\",\"optionLines\":[\"Critical Hit 150\",\"PvE Damage Boost 5%\",\"Block 150\",\"Attack 463 ~ 627\",\"Accuracy 100\"],\"classIds\":[\"gladiator\"],\"tradable\":true,\"officialUrl\":\"https://api-goats.plaync.com/aion2/v2.0/dict/search/item?locale=en-US&searchKeyword=Noble+Dragon+Lord+Greatsword&exact=true&size=10\",\"detailSlug\":null},{\"id\":\"110120002\",\"name\":\"Horned Dragon Lord Greatsword\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0110_T05.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"Heroic\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"Greatsword\",\"optionLines\":[\"Critical Hit 150\",\"PvE Damage Boost 5%\",\"Block 150\",\"Attack 463 ~ 627\",\"Accuracy 100\"],\"classIds\":[\"gladiator\"],\"tradable\":true,\"officialUrl\":\"https://api-goats.plaync.com/aion2/v2.0/dict/search/item?locale=en-US&searchKeyword=Horned+Dragon+Lord+Greatsword&exact=true&size=10\",\"detailSlug\":null},{\"id\":\"110120003\",\"name\":\"Ludra's Blade of Extinction\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0108_T06.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"Heroic\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"Greatsword\",\"optionLines\":[\"Critical Hit 150\",\"Block 150\",\"Accuracy 100\",\"Attack 421 ~ 569\"],\"classIds\":[\"gladiator\"],\"tradable\":false,\"officialUrl\":\"https://api-goats.plaync.com/aion2/v2.0/dict/search/item?locale=en-US&searchKeyword=Ludra%27s+Blade+of+Extinction&exact=true&size=10\",\"detailSlug\":null},{\"id\":\"110120004\",\"name\":\"Guardian High Commander Greatsword\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_Moon_01.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"Heroic\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"Greatsword\",\"optionLines\":[\"Critical Hit 150\",\"Block 150\",\"Attack 463 ~ 627\",\"Accuracy 100\",\"PvP Damage Boost 10%\"],\"classIds\":[\"gladiator\"],\"tradable\":false,\"officialUrl\":\"https://api-goats.plaync.com/aion2/v2.0/dict/search/item?locale=en-US&searchKeyword=Guardian+High+Commander+Greatsword&exact=true&size=10\",\"detailSlug\":null},{\"id\":\"110120005\",\"name\":\"Archon High Commander Greatsword\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_Moon_01.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"Heroic\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"Greatsword\",\"optionLines\":[\"Critical Hit 150\",\"Block 150\",\"Attack 463 ~ 627\",\"Accuracy 100\",\"PvP Damage Boost 10%\"],\"classIds\":[\"gladiator\"],\"tradable\":false,\"officialUrl\":\"https://api-goats.plaync.com/aion2/v2.0/dict/search/item?locale=en-US&searchKeyword=Archon+High+Commander+Greatsword&exact=true&size=10\",\"detailSlug\":null},{\"id\":\"110120006\",\"name\":\"Splendent Noble Dragon Lord Greatsword\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0110_T05.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"Heroic\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"Greatsword\",\"optionLines\":[\"Critical Hit 150\",\"PvE Damage Boost 5%\",\"Block 150\",\"Attack 489 ~ 661\",\"Accuracy 100\"],\"classIds\":[\"gladiator\"],\"tradable\":true,\"officialUrl\":\"https://api-goats.plaync.com/aion2/v2.0/dict/search/item?locale=en-US&searchKeyword=Splendent+Noble+Dragon+Lord+Greatsword&exact=true&size=10\",\"detailSlug\":null},{\"id\":\"110120007\",\"name\":\"Splendent Horned Dragon Lord Greatsword\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0110_T05.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"Heroic\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"Greatsword\",\"optionLines\":[\"Critical Hit 150\",\"PvE Damage Boost 5%\",\"Block 150\",\"Attack 489 ~ 661\",\"Accuracy 100\"],\"classIds\":[\"gladiator\"],\"tradable\":true,\"officialUrl\":\"https://api-goats.plaync.com/aion2/v2.0/dict/search/item?locale=en-US&searchKeyword=Splendent+Horned+Dragon+Lord+Greatsword&exact=true&size=10\",\"detailSlug\":null},{\"id\":\"110120012\",\"name\":\"Elite Guardian High Commander Greatsword\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_Moon_01.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"Heroic\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"Greatsword\",\"optionLines\":[\"Critical Hit 150\",\"Block 150\",\"Attack 463 ~ 627\",\"Accuracy 100\",\"PvP Damage Boost 10%\"],\"classIds\":[\"gladiator\"],\"tradable\":false,\"officialUrl\":\"https://api-goats.plaync.com/aion2/v2.0/dict/search/item?locale=en-US&searchKeyword=Elite+Guardian+High+Commander+Greatsword&exact=true&size=10\",\"detailSlug\":null},{\"id\":\"110120013\",\"name\":\"Elite Archon High Commander Greatsword\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_Moon_01.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"Heroic\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"Greatsword\",\"optionLines\":[\"Critical Hit 150\",\"Block 150\",\"Attack 463 ~ 627\",\"Accuracy 100\",\"PvP Damage Boost 10%\"],\"classIds\":[\"gladiator\"],\"tradable\":false,\"officialUrl\":\"https://api-goats.plaync.com/aion2/v2.0/dict/search/item?locale=en-US&searchKeyword=Elite+Archon+High+Commander+Greatsword&exact=true&size=10\",\"detailSlug\":null},{\"id\":\"110120014\",\"name\":\"Ludra's Blade of Extinction\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0108_T06.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"Heroic\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"Greatsword\",\"optionLines\":[\"Critical Hit 150\",\"Block 150\",\"Accuracy 100\",\"Attack 421 ~ 569\"],\"classIds\":[\"gladiator\"],\"tradable\":true,\"officialUrl\":\"https://api-goats.plaync.com/aion2/v2.0/dict/search/item?locale=en-US&searchKeyword=Ludra%27s+Blade+of+Extinction&exact=true&size=10\",\"detailSlug\":null},{\"id\":\"110120015\",\"name\":\"Corroded Sovereign's Raptorial Greatsword\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_Dream_01.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"Heroic\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"Greatsword\",\"optionLines\":[\"Critical Hit 150\",\"Block 150\",\"Attack 463 ~ 627\",\"Accuracy 100\"],\"classIds\":[\"gladiator\"],\"tradable\":false,\"officialUrl\":\"https://api-goats.plaync.com/aion2/v2.0/dict/search/item?locale=en-US&searchKeyword=Corroded+Sovereign%27s+Raptorial+Greatsword&exact=true&size=10\",\"detailSlug\":null},{\"id\":\"110120016\",\"name\":\"Corroded Sovereign's Raptorial Greatsword\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_Dream_01.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"Heroic\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"Greatsword\",\"optionLines\":[\"Critical Hit 150\",\"Block 150\",\"Attack 463 ~ 627\",\"Accuracy 100\"],\"classIds\":[\"gladiator\"],\"tradable\":true,\"officialUrl\":\"https://api-goats.plaync.com/aion2/v2.0/dict/search/item?locale=en-US&searchKeyword=Corroded+Sovereign%27s+Raptorial+Greatsword&exact=true&size=10\",\"detailSlug\":null},{\"id\":\"110120017\",\"name\":\"Genesis Dragon Lord Greatsword\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0117_T05.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"Heroic\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"Greatsword\",\"optionLines\":[\"Critical Hit 150\",\"PvE Damage Boost 5%\",\"Block 150\",\"Attack 548 ~ 742\",\"Accuracy 100\"],\"classIds\":[\"gladiator\"],\"tradable\":true,\"officialUrl\":\"https://api-goats.plaync.com/aion2/v2.0/dict/search/item?locale=en-US&searchKeyword=Genesis+Dragon+Lord+Greatsword&exact=true&size=10\",\"detailSlug\":null},{\"id\":\"110120018\",\"name\":\"Nemesis Dragon Lord Greatsword\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0117_T05.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"Heroic\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"Greatsword\",\"optionLines\":[\"Critical Hit 150\",\"PvE Damage Boost 5%\",\"Block 150\",\"Attack 548 ~ 742\",\"Accuracy 100\"],\"classIds\":[\"gladiator\"],\"tradable\":true,\"officialUrl\":\"https://api-goats.plaync.com/aion2/v2.0/dict/search/item?locale=en-US&searchKeyword=Nemesis+Dragon+Lord+Greatsword&exact=true&size=10\",\"detailSlug\":null},{\"id\":\"110120019\",\"name\":\"Splendent Genesis Dragon Lord Greatsword\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0117_T05.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"Heroic\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"Greatsword\",\"optionLines\":[\"Critical Hit 150\",\"PvE Damage Boost 5%\",\"Block 150\",\"Attack 574 ~ 776\",\"Accuracy 100\"],\"classIds\":[\"gladiator\"],\"tradable\":true,\"officialUrl\":\"https://api-goats.plaync.com/aion2/v2.0/dict/search/item?locale=en-US&searchKeyword=Splendent+Genesis+Dragon+Lord+Greatsword&exact=true&size=10\",\"detailSlug\":null},{\"id\":\"110120020\",\"name\":\"Splendent Nemesis Dragon Lord Greatsword\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0117_T05.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"Heroic\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"Greatsword\",\"optionLines\":[\"Critical Hit 150\",\"PvE Damage Boost 5%\",\"Block 150\",\"Attack 574 ~ 776\",\"Accuracy 100\"],\"classIds\":[\"gladiator\"],\"tradable\":true,\"officialUrl\":\"https://api-goats.plaync.com/aion2/v2.0/dict/search/item?locale=en-US&searchKeyword=Splendent+Nemesis+Dragon+Lord+Greatsword&exact=true&size=10\",\"detailSlug\":null},{\"id\":\"110120021\",\"name\":\"Noble Dragon Lord Greatsword\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0110_T05.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"Heroic\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"Greatsword\",\"optionLines\":[\"Critical Hit 150\",\"PvE Damage Boost 5%\",\"Block 150\",\"Attack 463 ~ 627\",\"Accuracy 100\"],\"classIds\":[\"gladiator\"],\"tradable\":false,\"officialUrl\":\"https://api-goats.plaync.com/aion2/v2.0/dict/search/item?locale=en-US&searchKeyword=Noble+Dragon+Lord+Greatsword&exact=true&size=10\",\"detailSlug\":null},{\"id\":\"110120022\",\"name\":\"Horned Dragon Lord Greatsword\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0110_T05.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"Heroic\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"Greatsword\",\"optionLines\":[\"Critical Hit 150\",\"PvE Damage Boost 5%\",\"Block 150\",\"Attack 463 ~ 627\",\"Accuracy 100\"],\"classIds\":[\"gladiator\"],\"tradable\":false,\"officialUrl\":\"https://api-goats.plaync.com/aion2/v2.0/dict/search/item?locale=en-US&searchKeyword=Horned+Dragon+Lord+Greatsword&exact=true&size=10\",\"detailSlug\":null},{\"id\":\"110120023\",\"name\":\"Splendent Noble Dragon Lord Greatsword\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0110_T05.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"Heroic\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"Greatsword\",\"optionLines\":[\"Critical Hit 150\",\"PvE Damage Boost 5%\",\"Block 150\",\"Attack 489 ~ 661\",\"Accuracy 100\"],\"classIds\":[\"gladiator\"],\"tradable\":false,\"officialUrl\":\"https://api-goats.plaync.com/aion2/v2.0/dict/search/item?locale=en-US&searchKeyword=Splendent+Noble+Dragon+Lord+Greatsword&exact=true&size=10\",\"detailSlug\":null},{\"id\":\"110120024\",\"name\":\"Splendent Horned Dragon Lord Greatsword\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0110_T05.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"Heroic\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"Greatsword\",\"optionLines\":[\"Critical Hit 150\",\"PvE Damage Boost 5%\",\"Block 150\",\"Attack 489 ~ 661\",\"Accuracy 100\"],\"classIds\":[\"gladiator\"],\"tradable\":false,\"officialUrl\":\"https://api-goats.plaync.com/aion2/v2.0/dict/search/item?locale=en-US&searchKeyword=Splendent+Horned+Dragon+Lord+Greatsword&exact=true&size=10\",\"detailSlug\":null}],\"ko\":[{\"id\":\"110120001\",\"name\":\"응룡왕의 대검\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0110_T05.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"영웅\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"대검\",\"optionLines\":[\"공격력 463 ~ 627\",\"막기 150\",\"명중 100\",\"치명타 150\",\"PVE 피해 증폭 5%\"],\"classIds\":[\"gladiator\"],\"tradable\":true,\"officialUrl\":\"https://aion2.plaync.com/ko-kr/info/item?detail=item_110120001_0_0\",\"detailSlug\":null},{\"id\":\"110120002\",\"name\":\"기룡왕의 대검\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0110_T05.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"영웅\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"대검\",\"optionLines\":[\"공격력 463 ~ 627\",\"막기 150\",\"명중 100\",\"치명타 150\",\"PVE 피해 증폭 5%\"],\"classIds\":[\"gladiator\"],\"tradable\":true,\"officialUrl\":\"https://aion2.plaync.com/ko-kr/info/item?detail=item_110120002_0_0\",\"detailSlug\":null},{\"id\":\"110120003\",\"name\":\"루드라의 절멸도\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0108_T06.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"영웅\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"대검\",\"optionLines\":[\"공격력 421 ~ 569\",\"막기 150\",\"명중 100\",\"치명타 150\"],\"classIds\":[\"gladiator\"],\"tradable\":false,\"officialUrl\":\"https://aion2.plaync.com/ko-kr/info/item?detail=item_110120003_0_0\",\"detailSlug\":null},{\"id\":\"110120004\",\"name\":\"가디언 군단장의 대검\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_Moon_01.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"영웅\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"대검\",\"optionLines\":[\"PVP 피해 증폭 10%\",\"공격력 463 ~ 627\",\"막기 150\",\"명중 100\",\"치명타 150\"],\"classIds\":[\"gladiator\"],\"tradable\":false,\"officialUrl\":\"https://aion2.plaync.com/ko-kr/info/item?detail=item_110120004_0_0\",\"detailSlug\":null},{\"id\":\"110120005\",\"name\":\"아칸 군단장의 대검\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_Moon_01.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"영웅\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"대검\",\"optionLines\":[\"PVP 피해 증폭 10%\",\"공격력 463 ~ 627\",\"막기 150\",\"명중 100\",\"치명타 150\"],\"classIds\":[\"gladiator\"],\"tradable\":false,\"officialUrl\":\"https://aion2.plaync.com/ko-kr/info/item?detail=item_110120005_0_0\",\"detailSlug\":null},{\"id\":\"110120006\",\"name\":\"빛나는 응룡왕의 대검\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0110_T05.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"영웅\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"대검\",\"optionLines\":[\"막기 150\",\"명중 100\",\"공격력 489 ~ 661\",\"치명타 150\",\"PVE 피해 증폭 5%\"],\"classIds\":[\"gladiator\"],\"tradable\":true,\"officialUrl\":\"https://aion2.plaync.com/ko-kr/info/item?detail=item_110120006_0_0\",\"detailSlug\":null},{\"id\":\"110120007\",\"name\":\"빛나는 기룡왕의 대검\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0110_T05.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"영웅\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"대검\",\"optionLines\":[\"막기 150\",\"명중 100\",\"공격력 489 ~ 661\",\"치명타 150\",\"PVE 피해 증폭 5%\"],\"classIds\":[\"gladiator\"],\"tradable\":true,\"officialUrl\":\"https://aion2.plaync.com/ko-kr/info/item?detail=item_110120007_0_0\",\"detailSlug\":null},{\"id\":\"110120012\",\"name\":\"정예 가디언 군단장의 대검\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_Moon_01.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"영웅\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"대검\",\"optionLines\":[\"PVP 피해 증폭 10%\",\"공격력 463 ~ 627\",\"막기 150\",\"명중 100\",\"치명타 150\"],\"classIds\":[\"gladiator\"],\"tradable\":false,\"officialUrl\":\"https://aion2.plaync.com/ko-kr/info/item?detail=item_110120012_0_0\",\"detailSlug\":null},{\"id\":\"110120013\",\"name\":\"정예 아칸 군단장의 대검\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_Moon_01.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"영웅\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"대검\",\"optionLines\":[\"PVP 피해 증폭 10%\",\"공격력 463 ~ 627\",\"막기 150\",\"명중 100\",\"치명타 150\"],\"classIds\":[\"gladiator\"],\"tradable\":false,\"officialUrl\":\"https://aion2.plaync.com/ko-kr/info/item?detail=item_110120013_0_0\",\"detailSlug\":null},{\"id\":\"110120014\",\"name\":\"루드라의 절멸도\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0108_T06.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"영웅\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"대검\",\"optionLines\":[\"공격력 421 ~ 569\",\"막기 150\",\"명중 100\",\"치명타 150\"],\"classIds\":[\"gladiator\"],\"tradable\":true,\"officialUrl\":\"https://aion2.plaync.com/ko-kr/info/item?detail=item_110120014_0_0\",\"detailSlug\":null},{\"id\":\"110120015\",\"name\":\"침식된 지배자의 포식대검\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_Dream_01.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"영웅\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"대검\",\"optionLines\":[\"공격력 463 ~ 627\",\"막기 150\",\"명중 100\",\"치명타 150\"],\"classIds\":[\"gladiator\"],\"tradable\":false,\"officialUrl\":\"https://aion2.plaync.com/ko-kr/info/item?detail=item_110120015_0_0\",\"detailSlug\":null},{\"id\":\"110120016\",\"name\":\"침식된 지배자의 포식대검\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_Dream_01.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"영웅\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"대검\",\"optionLines\":[\"공격력 463 ~ 627\",\"막기 150\",\"명중 100\",\"치명타 150\"],\"classIds\":[\"gladiator\"],\"tradable\":true,\"officialUrl\":\"https://aion2.plaync.com/ko-kr/info/item?detail=item_110120016_0_0\",\"detailSlug\":null},{\"id\":\"110120017\",\"name\":\"창룡왕의 대검\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0117_T05.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"영웅\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"대검\",\"optionLines\":[\"막기 150\",\"공격력 548 ~ 742\",\"명중 100\",\"치명타 150\",\"PVE 피해 증폭 5%\"],\"classIds\":[\"gladiator\"],\"tradable\":true,\"officialUrl\":\"https://aion2.plaync.com/ko-kr/info/item?detail=item_110120017_0_0\",\"detailSlug\":null},{\"id\":\"110120018\",\"name\":\"멸룡왕의 대검\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0117_T05.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"영웅\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"대검\",\"optionLines\":[\"막기 150\",\"공격력 548 ~ 742\",\"명중 100\",\"치명타 150\",\"PVE 피해 증폭 5%\"],\"classIds\":[\"gladiator\"],\"tradable\":true,\"officialUrl\":\"https://aion2.plaync.com/ko-kr/info/item?detail=item_110120018_0_0\",\"detailSlug\":null},{\"id\":\"110120019\",\"name\":\"빛나는 창룡왕의 대검\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0117_T05.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"영웅\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"대검\",\"optionLines\":[\"공격력 574 ~ 776\",\"막기 150\",\"명중 100\",\"치명타 150\",\"PVE 피해 증폭 5%\"],\"classIds\":[\"gladiator\"],\"tradable\":true,\"officialUrl\":\"https://aion2.plaync.com/ko-kr/info/item?detail=item_110120019_0_0\",\"detailSlug\":null},{\"id\":\"110120020\",\"name\":\"빛나는 멸룡왕의 대검\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0117_T05.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"영웅\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"대검\",\"optionLines\":[\"공격력 574 ~ 776\",\"막기 150\",\"명중 100\",\"치명타 150\",\"PVE 피해 증폭 5%\"],\"classIds\":[\"gladiator\"],\"tradable\":true,\"officialUrl\":\"https://aion2.plaync.com/ko-kr/info/item?detail=item_110120020_0_0\",\"detailSlug\":null},{\"id\":\"110120021\",\"name\":\"응룡왕의 대검\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0110_T05.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"영웅\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"대검\",\"optionLines\":[\"공격력 463 ~ 627\",\"막기 150\",\"명중 100\",\"치명타 150\",\"PVE 피해 증폭 5%\"],\"classIds\":[\"gladiator\"],\"tradable\":false,\"officialUrl\":\"https://aion2.plaync.com/ko-kr/info/item?detail=item_110120021_0_0\",\"detailSlug\":null},{\"id\":\"110120022\",\"name\":\"기룡왕의 대검\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0110_T05.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"영웅\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"대검\",\"optionLines\":[\"공격력 463 ~ 627\",\"막기 150\",\"명중 100\",\"치명타 150\",\"PVE 피해 증폭 5%\"],\"classIds\":[\"gladiator\"],\"tradable\":false,\"officialUrl\":\"https://aion2.plaync.com/ko-kr/info/item?detail=item_110120022_0_0\",\"detailSlug\":null},{\"id\":\"110120023\",\"name\":\"빛나는 응룡왕의 대검\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0110_T05.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"영웅\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"대검\",\"optionLines\":[\"막기 150\",\"명중 100\",\"공격력 489 ~ 661\",\"치명타 150\",\"PVE 피해 증폭 5%\"],\"classIds\":[\"gladiator\"],\"tradable\":false,\"officialUrl\":\"https://aion2.plaync.com/ko-kr/info/item?detail=item_110120023_0_0\",\"detailSlug\":null},{\"id\":\"110120024\",\"name\":\"빛나는 기룡왕의 대검\",\"imageUrl\":\"https://assets.playnccdn.com/static-aion2-gamedata/resources/Icon_WP_GS_0110_T05.png\",\"gradeCode\":\"Epic\",\"gradeName\":\"영웅\",\"categoryCode\":\"Greatsword\",\"categoryName\":\"대검\",\"optionLines\":[\"막기 150\",\"명중 100\",\"공격력 489 ~ 661\",\"치명타 150\",\"PVE 피해 증폭 5%\"],\"classIds\":[\"gladiator\"],\"tradable\":false,\"officialUrl\":\"https://aion2.plaync.com/ko-kr/info/item?detail=item_110120024_0_0\",\"detailSlug\":null}]}"),
 	facetsByLocale: {
 		"zh-hant": {
@@ -180969,31 +180969,31 @@ var item_catalog_bootstrap_default = {
 				{
 					"code": "Epic",
 					"label": "英雄",
-					"count": 864,
+					"count": 1049,
 					"rank": 5
 				},
 				{
 					"code": "Unique",
 					"label": "獨特",
-					"count": 3279,
+					"count": 3352,
 					"rank": 4
 				},
 				{
 					"code": "Legend",
 					"label": "傳承",
-					"count": 3032,
+					"count": 3057,
 					"rank": 3
 				},
 				{
 					"code": "Rare",
 					"label": "稀有",
-					"count": 1802,
+					"count": 1824,
 					"rank": 2
 				},
 				{
 					"code": "Common",
 					"label": "一般",
-					"count": 1933,
+					"count": 1939,
 					"rank": 1
 				}
 			],
@@ -181011,7 +181011,7 @@ var item_catalog_bootstrap_default = {
 				{
 					"code": "Bow",
 					"label": "弓",
-					"count": 216
+					"count": 230
 				},
 				{
 					"code": "Gloves",
@@ -181026,22 +181026,27 @@ var item_catalog_bootstrap_default = {
 				{
 					"code": "Greatsword",
 					"label": "巨劍",
-					"count": 216
+					"count": 230
 				},
 				{
 					"code": "unclassified",
 					"label": "未分類",
-					"count": 169
+					"count": 175
+				},
+				{
+					"code": "Seal",
+					"label": "印章",
+					"count": 4
 				},
 				{
 					"code": "Earring",
 					"label": "耳環",
-					"count": 200
+					"count": 214
 				},
 				{
 					"code": "Ring",
 					"label": "戒指",
-					"count": 200
+					"count": 214
 				},
 				{
 					"code": "SkinArmor",
@@ -181056,12 +181061,12 @@ var item_catalog_bootstrap_default = {
 				{
 					"code": "Etc",
 					"label": "其他",
-					"count": 4
+					"count": 6
 				},
 				{
 					"code": "Misc_001",
 					"label": "其他（其他）",
-					"count": 130
+					"count": 135
 				},
 				{
 					"code": "Scroll",
@@ -181076,22 +181081,22 @@ var item_catalog_bootstrap_default = {
 				{
 					"code": "Staff",
 					"label": "法杖",
-					"count": 216
+					"count": 230
 				},
 				{
 					"code": "Magicbook",
 					"label": "法書",
-					"count": 216
+					"count": 230
 				},
 				{
 					"code": "Orb",
 					"label": "法珠",
-					"count": 216
+					"count": 230
 				},
 				{
 					"code": "ConversionResource",
 					"label": "物質變換",
-					"count": 64
+					"count": 67
 				},
 				{
 					"code": "Shoulder",
@@ -181101,7 +181106,7 @@ var item_catalog_bootstrap_default = {
 				{
 					"code": "Sword",
 					"label": "長劍",
-					"count": 216
+					"count": 230
 				},
 				{
 					"code": "Food",
@@ -181111,12 +181116,12 @@ var item_catalog_bootstrap_default = {
 				{
 					"code": "Gauntlet",
 					"label": "拳甲",
-					"count": 216
+					"count": 230
 				},
 				{
 					"code": "Usable_001",
 					"label": "消耗品（其他）",
-					"count": 4479
+					"count": 4577
 				},
 				{
 					"code": "Material",
@@ -181131,7 +181136,7 @@ var item_catalog_bootstrap_default = {
 				{
 					"code": "Wing",
 					"label": "翅膀",
-					"count": 32
+					"count": 34
 				},
 				{
 					"code": "Brooch",
@@ -181141,7 +181146,7 @@ var item_catalog_bootstrap_default = {
 				{
 					"code": "Mace",
 					"label": "釘錘",
-					"count": 216
+					"count": 230
 				},
 				{
 					"code": "GatherResource",
@@ -181151,17 +181156,17 @@ var item_catalog_bootstrap_default = {
 				{
 					"code": "Dagger",
 					"label": "短劍",
-					"count": 216
+					"count": 230
 				},
 				{
 					"code": "Necklace",
 					"label": "項鍊",
-					"count": 196
+					"count": 210
 				},
 				{
 					"code": "Deco",
 					"label": "萬神殿",
-					"count": 236
+					"count": 239
 				},
 				{
 					"code": "SkinOrnament",
@@ -181176,7 +181181,7 @@ var item_catalog_bootstrap_default = {
 				{
 					"code": "CraftResource",
 					"label": "製作材料",
-					"count": 199
+					"count": 207
 				},
 				{
 					"code": "Box",
@@ -181201,7 +181206,7 @@ var item_catalog_bootstrap_default = {
 				{
 					"code": "Guarder",
 					"label": "臂甲",
-					"count": 212
+					"count": 224
 				},
 				{
 					"code": "Potion",
@@ -181218,47 +181223,47 @@ var item_catalog_bootstrap_default = {
 				{
 					"code": "gladiator",
 					"label": "劍星",
-					"count": 9182
+					"count": 9381
 				},
 				{
 					"code": "templar",
 					"label": "守護星",
-					"count": 9182
+					"count": 9381
 				},
 				{
 					"code": "assassin",
 					"label": "殺星",
-					"count": 9182
+					"count": 9381
 				},
 				{
 					"code": "ranger",
 					"label": "弓星",
-					"count": 9182
+					"count": 9381
 				},
 				{
 					"code": "sorcerer",
 					"label": "魔道星",
-					"count": 9182
+					"count": 9381
 				},
 				{
 					"code": "spiritmaster",
 					"label": "精靈星",
-					"count": 9182
+					"count": 9381
 				},
 				{
 					"code": "cleric",
 					"label": "治癒星",
-					"count": 9182
+					"count": 9381
 				},
 				{
 					"code": "chanter",
 					"label": "護法星",
-					"count": 9182
+					"count": 9381
 				},
 				{
 					"code": "brawler",
 					"label": "拳星",
-					"count": 9182
+					"count": 9381
 				}
 			]
 		},
@@ -181267,31 +181272,31 @@ var item_catalog_bootstrap_default = {
 				{
 					"code": "Epic",
 					"label": "Heroic",
-					"count": 864,
+					"count": 1049,
 					"rank": 5
 				},
 				{
 					"code": "Unique",
 					"label": "Unique",
-					"count": 3279,
+					"count": 3352,
 					"rank": 4
 				},
 				{
 					"code": "Legend",
 					"label": "Epic",
-					"count": 3032,
+					"count": 3057,
 					"rank": 3
 				},
 				{
 					"code": "Rare",
 					"label": "Rare",
-					"count": 1802,
+					"count": 1824,
 					"rank": 2
 				},
 				{
 					"code": "Common",
 					"label": "Common",
-					"count": 1933,
+					"count": 1939,
 					"rank": 1
 				}
 			],
@@ -181314,7 +181319,7 @@ var item_catalog_bootstrap_default = {
 				{
 					"code": "Bow",
 					"label": "Bow",
-					"count": 216
+					"count": 230
 				},
 				{
 					"code": "Bracelet",
@@ -181344,17 +181349,17 @@ var item_catalog_bootstrap_default = {
 				{
 					"code": "Usable_001",
 					"label": "Consumables (Other)",
-					"count": 4479
+					"count": 4577
 				},
 				{
 					"code": "CraftResource",
 					"label": "Crafting Material",
-					"count": 199
+					"count": 207
 				},
 				{
 					"code": "Dagger",
 					"label": "Dagger",
-					"count": 216
+					"count": 230
 				},
 				{
 					"code": "SkinOrnament",
@@ -181364,7 +181369,7 @@ var item_catalog_bootstrap_default = {
 				{
 					"code": "Earring",
 					"label": "Earrings",
-					"count": 200
+					"count": 214
 				},
 				{
 					"code": "Food",
@@ -181379,7 +181384,7 @@ var item_catalog_bootstrap_default = {
 				{
 					"code": "Gauntlet",
 					"label": "Gauntlet",
-					"count": 216
+					"count": 230
 				},
 				{
 					"code": "Gloves",
@@ -181389,12 +181394,12 @@ var item_catalog_bootstrap_default = {
 				{
 					"code": "Greatsword",
 					"label": "Greatsword",
-					"count": 216
+					"count": 230
 				},
 				{
 					"code": "Guarder",
 					"label": "Guard",
-					"count": 212
+					"count": 224
 				},
 				{
 					"code": "Helmet",
@@ -181409,12 +181414,12 @@ var item_catalog_bootstrap_default = {
 				{
 					"code": "Sword",
 					"label": "Longsword",
-					"count": 216
+					"count": 230
 				},
 				{
 					"code": "Mace",
 					"label": "Mace",
-					"count": 216
+					"count": 230
 				},
 				{
 					"code": "MagicStone",
@@ -181424,27 +181429,27 @@ var item_catalog_bootstrap_default = {
 				{
 					"code": "Etc",
 					"label": "Miscellaneous",
-					"count": 4
+					"count": 6
 				},
 				{
 					"code": "Misc_001",
 					"label": "Miscellaneous (Other)",
-					"count": 130
+					"count": 135
 				},
 				{
 					"code": "Necklace",
 					"label": "Necklace",
-					"count": 196
+					"count": 210
 				},
 				{
 					"code": "Orb",
 					"label": "Orb",
-					"count": 216
+					"count": 230
 				},
 				{
 					"code": "Deco",
 					"label": "Pantheon",
-					"count": 236
+					"count": 239
 				},
 				{
 					"code": "Shoulder",
@@ -181459,12 +181464,17 @@ var item_catalog_bootstrap_default = {
 				{
 					"code": "Ring",
 					"label": "Ring",
-					"count": 200
+					"count": 214
 				},
 				{
 					"code": "Scroll",
 					"label": "Scroll",
 					"count": 57
+				},
+				{
+					"code": "Seal",
+					"label": "Seal",
+					"count": 4
 				},
 				{
 					"code": "Boots",
@@ -181479,17 +181489,17 @@ var item_catalog_bootstrap_default = {
 				{
 					"code": "Magicbook",
 					"label": "Spellbook",
-					"count": 216
+					"count": 230
 				},
 				{
 					"code": "Staff",
 					"label": "Staff",
-					"count": 216
+					"count": 230
 				},
 				{
 					"code": "ConversionResource",
 					"label": "Substance Morph Material",
-					"count": 64
+					"count": 67
 				},
 				{
 					"code": "GodStone",
@@ -181504,59 +181514,59 @@ var item_catalog_bootstrap_default = {
 				{
 					"code": "unclassified",
 					"label": "Unclassified",
-					"count": 169
+					"count": 175
 				},
 				{
 					"code": "Wing",
 					"label": "Wings",
-					"count": 32
+					"count": 34
 				}
 			],
 			"classes": [
 				{
 					"code": "gladiator",
 					"label": "Gladiator",
-					"count": 9182
+					"count": 9381
 				},
 				{
 					"code": "templar",
 					"label": "Templar",
-					"count": 9182
+					"count": 9381
 				},
 				{
 					"code": "assassin",
 					"label": "Assassin",
-					"count": 9182
+					"count": 9381
 				},
 				{
 					"code": "ranger",
 					"label": "Ranger",
-					"count": 9182
+					"count": 9381
 				},
 				{
 					"code": "sorcerer",
 					"label": "Sorcerer",
-					"count": 9182
+					"count": 9381
 				},
 				{
 					"code": "spiritmaster",
 					"label": "Spiritmaster",
-					"count": 9182
+					"count": 9381
 				},
 				{
 					"code": "cleric",
 					"label": "Cleric",
-					"count": 9182
+					"count": 9381
 				},
 				{
 					"code": "chanter",
 					"label": "Chanter",
-					"count": 9182
+					"count": 9381
 				},
 				{
 					"code": "brawler",
 					"label": "Brawler",
-					"count": 9182
+					"count": 9381
 				}
 			]
 		},
@@ -181565,31 +181575,31 @@ var item_catalog_bootstrap_default = {
 				{
 					"code": "Epic",
 					"label": "영웅",
-					"count": 864,
+					"count": 1049,
 					"rank": 5
 				},
 				{
 					"code": "Unique",
 					"label": "유일",
-					"count": 3279,
+					"count": 3352,
 					"rank": 4
 				},
 				{
 					"code": "Legend",
 					"label": "전승",
-					"count": 3032,
+					"count": 3057,
 					"rank": 3
 				},
 				{
 					"code": "Rare",
 					"label": "희귀",
-					"count": 1802,
+					"count": 1824,
 					"rank": 2
 				},
 				{
 					"code": "Common",
 					"label": "일반",
-					"count": 1933,
+					"count": 1939,
 					"rank": 1
 				}
 			],
@@ -181597,7 +181607,7 @@ var item_catalog_bootstrap_default = {
 				{
 					"code": "Guarder",
 					"label": "가더",
-					"count": 212
+					"count": 224
 				},
 				{
 					"code": "Shoulder",
@@ -181607,37 +181617,37 @@ var item_catalog_bootstrap_default = {
 				{
 					"code": "Gauntlet",
 					"label": "권갑",
-					"count": 216
+					"count": 230
 				},
 				{
 					"code": "Earring",
 					"label": "귀걸이",
-					"count": 200
+					"count": 214
 				},
 				{
 					"code": "Etc",
 					"label": "기타",
-					"count": 4
+					"count": 6
 				},
 				{
 					"code": "Misc_001",
 					"label": "기타 (기타)",
-					"count": 130
+					"count": 135
 				},
 				{
 					"code": "Wing",
 					"label": "날개깃",
-					"count": 32
+					"count": 34
 				},
 				{
 					"code": "Dagger",
 					"label": "단검",
-					"count": 216
+					"count": 230
 				},
 				{
 					"code": "Greatsword",
 					"label": "대검",
-					"count": 216
+					"count": 230
 				},
 				{
 					"code": "MagicStone",
@@ -181647,7 +181657,7 @@ var item_catalog_bootstrap_default = {
 				{
 					"code": "Deco",
 					"label": "만신전",
-					"count": 236
+					"count": 239
 				},
 				{
 					"code": "Cape",
@@ -181657,7 +181667,7 @@ var item_catalog_bootstrap_default = {
 				{
 					"code": "Necklace",
 					"label": "목걸이",
-					"count": 196
+					"count": 210
 				},
 				{
 					"code": "Potion",
@@ -181667,17 +181677,17 @@ var item_catalog_bootstrap_default = {
 				{
 					"code": "ConversionResource",
 					"label": "물질변환재료",
-					"count": 64
+					"count": 67
 				},
 				{
 					"code": "unclassified",
 					"label": "미분류",
-					"count": 169
+					"count": 175
 				},
 				{
 					"code": "Ring",
 					"label": "반지",
-					"count": 200
+					"count": 214
 				},
 				{
 					"code": "SkinArmor",
@@ -181692,17 +181702,17 @@ var item_catalog_bootstrap_default = {
 				{
 					"code": "Staff",
 					"label": "법봉",
-					"count": 216
+					"count": 230
 				},
 				{
 					"code": "Magicbook",
 					"label": "법서",
-					"count": 216
+					"count": 230
 				},
 				{
 					"code": "Orb",
 					"label": "보주",
-					"count": 216
+					"count": 230
 				},
 				{
 					"code": "Brooch",
@@ -181722,7 +181732,7 @@ var item_catalog_bootstrap_default = {
 				{
 					"code": "Usable_001",
 					"label": "소모품 (기타)",
-					"count": 4479
+					"count": 4577
 				},
 				{
 					"code": "Boots",
@@ -181740,6 +181750,11 @@ var item_catalog_bootstrap_default = {
 					"count": 135
 				},
 				{
+					"code": "Seal",
+					"label": "인장",
+					"count": 4
+				},
+				{
 					"code": "Gloves",
 					"label": "장갑",
 					"count": 331
@@ -181747,7 +181762,7 @@ var item_catalog_bootstrap_default = {
 				{
 					"code": "Sword",
 					"label": "장검",
-					"count": 216
+					"count": 230
 				},
 				{
 					"code": "SkinOrnament",
@@ -181762,12 +181777,12 @@ var item_catalog_bootstrap_default = {
 				{
 					"code": "Mace",
 					"label": "전곤",
-					"count": 216
+					"count": 230
 				},
 				{
 					"code": "CraftResource",
 					"label": "제작재료",
-					"count": 199
+					"count": 207
 				},
 				{
 					"code": "Scroll",
@@ -181807,54 +181822,54 @@ var item_catalog_bootstrap_default = {
 				{
 					"code": "Bow",
 					"label": "활",
-					"count": 216
+					"count": 230
 				}
 			],
 			"classes": [
 				{
 					"code": "gladiator",
 					"label": "검성",
-					"count": 9182
+					"count": 9381
 				},
 				{
 					"code": "templar",
 					"label": "수호성",
-					"count": 9182
+					"count": 9381
 				},
 				{
 					"code": "assassin",
 					"label": "살성",
-					"count": 9182
+					"count": 9381
 				},
 				{
 					"code": "ranger",
 					"label": "궁성",
-					"count": 9182
+					"count": 9381
 				},
 				{
 					"code": "sorcerer",
 					"label": "마도성",
-					"count": 9182
+					"count": 9381
 				},
 				{
 					"code": "spiritmaster",
 					"label": "정령성",
-					"count": 9182
+					"count": 9381
 				},
 				{
 					"code": "cleric",
 					"label": "치유성",
-					"count": 9182
+					"count": 9381
 				},
 				{
 					"code": "chanter",
 					"label": "호법성",
-					"count": 9182
+					"count": 9381
 				},
 				{
 					"code": "brawler",
 					"label": "권성",
-					"count": 9182
+					"count": 9381
 				}
 			]
 		}
