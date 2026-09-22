@@ -1,80 +1,38 @@
-# AION2-KINA 测试环境 — 蓝绿演练拓扑（分支 rh/bluegreen）
-# 目的：在只碰 test 的前提下实测两件事：
-#   ① 部署时只改 standby 的 dist，live 槽是否不被重建（镜像 id 不变即不重建）；
-#   ② 翻转 edge 的 UPSTREAM_HOST 造成多少秒可见抖动。
-# 架构: CF 橙云 → Traefik (443) → edge(nginx, 唯一 router) → app-a | app-b
-# 隔离: 两个 app 槽各持独立卷（回退会连带回退后台数据，已确认接受）；
-#       每槽另挂 canary router（内部假域名）用于「不接生产流量也能体检 standby」。
-# 注意: 不要写 container_name —— Dokploy 用 `docker compose -p <project>` 管理。
-#       服务名 app-a / app-b 在同一 compose 网络内天然可解析，故 upstream 用服务名。
+# AION2-KINA 开发隔离环境 `kina-dev` —— 只存在于分支 `feat/build-planner-dev`
+#
+# 用途：feature 分支 `feat/build-planner`（Build Planner / 官方 API 代理层）的**功能**验证。
+#   蓝绿拓扑本身已在生产与 kina-test 验过，这里刻意不做拓扑：单服务、无 edge、无切换点。
+# 隔离（三条都是硬要求，别改）：
+#   1) 不声明任何真实域名 router，也不建 edge ⇒ 本 project 永远拿不到 www.aion2kina.com。
+#   2) 卷名 dev-state/dev-data，全新、不 external、绝不引用生产或 test 的卷名。
+#   3) router 名 aion2-dev / 域名 aion2-dev.local 全机唯一，且已登记进
+#      `AION2-KINA-build-planner/scripts/check-prod-bluegreen.mjs` 的 ENV_COLLISIONS + SIBLING_ENVS
+#      ⇒ 生产部署闸门会双向比对（生产抢它会被红，本文件抢生产也会被红）。
+# 访问：只在机器内可达，`curl -k --resolve aion2-dev.local:443:<机器IP>`；零 DNS / 零 CF 变更。
+# 内存：2g/3g。生产两槽 3g/4g 是因为实测 2g 会在自身 cgroup 内被 OOM 杀；但 kina-test 长期
+#   在 2g/2560m 下跑同一个镜像，说明 2g 足以起+低流量。dev 若在此上限内 OOM，那本身就是一条
+#   结论（说明下限是启动占用而非负载），不要第一反应往上调。
+# 端口：容器内 3001 与生产/test 相同 —— 各自在独立 netns 里，不冲突；换端口要改镜像里的
+#   wrangler 参数，收益只有"日志好看一点"，不值。
 
 services:
-  edge:
-    build:
-      context: ./edge
-    restart: unless-stopped
-    depends_on:
-      - app-a
-      - app-b
-    environment:
-      # 唯一被允许做 envsubst 的变量前缀，保住 nginx 自带的 $host/$remote_addr 等
-      NGINX_ENVSUBST_FILTER: "UPSTREAM_"
-      # 切换 = 改这一行然后只部署 edge（app 槽不重启）
-      UPSTREAM_HOST: app-b
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.aion2-kina-test.rule=Host(`test.aion2kina.com`)"
-      - "traefik.http.routers.aion2-kina-test.entrypoints=websecure"
-      - "traefik.http.routers.aion2-kina-test.tls=true"
-      - "traefik.http.services.aion2-kina-test.loadbalancer.server.port=80"
-
-  app-a:
+  app-dev:
     build:
       context: ./app
       args:
-        SLOT_DIST: dist-a
+        SLOT_DIST: dist-dev
     restart: unless-stopped
     env_file: .env
     environment:
       ASSETS: /app/dist/client
+      # 必须显式覆盖：worker 的 canonicalSiteOrigin() 只要 SITE_URL 是合法 https origin
+      # 就会把所有请求 308 到它。留成生产值 ⇒ dev 上每个页面都会被重定向到真实域名。
+      SITE_URL: https://aion2-dev.local
     volumes:
-      - bg-state-a:/app/dist/server/.wrangler/state/v3
-      - bg-data-a:/app/data
+      - dev-state:/app/dist/server/.wrangler/state/v3
+      - dev-data:/app/data
     mem_limit: 2g
-    memswap_limit: 2560m
-    logging:
-      driver: json-file
-      options:
-        max-size: "10m"
-        max-file: "3"
-    healthcheck:
-      test: ["CMD", "node", "-e", "fetch('http://localhost:3001/en/').then(r=>{if(!r.ok)throw 1})"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 300s
-    labels:
-      # canary：仅内部域名可达，用来在 standby 未接流量时体检它（curl --resolve 到机器 IP）
-      - "traefik.enable=true"
-      - "traefik.http.routers.aion2-slot-a.rule=Host(`aion2-slot-a.local`)"
-      - "traefik.http.routers.aion2-slot-a.entrypoints=websecure"
-      - "traefik.http.routers.aion2-slot-a.tls=true"
-      - "traefik.http.services.aion2-slot-a.loadbalancer.server.port=3001"
-
-  app-b:
-    build:
-      context: ./app
-      args:
-        SLOT_DIST: dist-b
-    restart: unless-stopped
-    env_file: .env
-    environment:
-      ASSETS: /app/dist/client
-    volumes:
-      - bg-state-b:/app/dist/server/.wrangler/state/v3
-      - bg-data-b:/app/data
-    mem_limit: 2g
-    memswap_limit: 2560m
+    memswap_limit: 3g
     logging:
       driver: json-file
       options:
@@ -88,17 +46,13 @@ services:
       start_period: 300s
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.aion2-slot-b.rule=Host(`aion2-slot-b.local`)"
-      - "traefik.http.routers.aion2-slot-b.entrypoints=websecure"
-      - "traefik.http.routers.aion2-slot-b.tls=true"
-      - "traefik.http.services.aion2-slot-b.loadbalancer.server.port=3001"
+      - "traefik.http.routers.aion2-dev.rule=Host(`aion2-dev.local`)"
+      - "traefik.http.routers.aion2-dev.entrypoints=websecure"
+      - "traefik.http.routers.aion2-dev.tls=true"
+      - "traefik.http.services.aion2-dev.loadbalancer.server.port=3001"
 
 volumes:
-  bg-state-a:
+  dev-state:
     driver: local
-  bg-data-a:
-    driver: local
-  bg-state-b:
-    driver: local
-  bg-data-b:
+  dev-data:
     driver: local

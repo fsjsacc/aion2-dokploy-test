@@ -1,3 +1,5 @@
 .env
 node_modules/
 *.log
+# kina-dev 的本机状态（composeId / project 前缀），不入库
+.dev-state.json
