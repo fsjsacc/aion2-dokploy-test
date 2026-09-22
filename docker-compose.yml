@@ -20,7 +20,7 @@ services:
       # 唯一被允许做 envsubst 的变量前缀，保住 nginx 自带的 $host/$remote_addr 等
       NGINX_ENVSUBST_FILTER: "UPSTREAM_"
       # 切换 = 改这一行然后只部署 edge（app 槽不重启）
-      UPSTREAM_HOST: app-a
+      UPSTREAM_HOST: app-b
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.aion2-kina-test.rule=Host(`test.aion2kina.com`)"
