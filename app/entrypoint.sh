@@ -85,7 +85,7 @@ fi
 # getEvents 的 since/until/filters 又被忽略（只有约 5 分钟窗口）。但容器内看得见 /sys/fs/cgroup/* 与
 # /proc/<pid>/status，而 docker.readContainerFile 能把文件读回来 ⇒ 用一条常驻采样换到
 # "谁在吃内存 + 跨过阈值的时刻 + 应用什么时候开始不回话"。
-# 约束：独立进程、任何异常只写进当行不影响应用、文件恒定只留最后 200 行（避免自己把 cgroup 撑大）。
+# 约束：独立进程、任何异常只写进行内不影响应用、文件只留最后 3000 行（约 25 小时，避免自己把 cgroup 撑大）。
 # 必须是 .cjs：/app/package.json 里是 "type": "module"，写成 .js 会被当 ESM ⇒ require 直接 ReferenceError
 # （上一版就是这么死的；旁边那个 /tmp/fix-wrangler.js 能跑是因为 /tmp 下没有 package.json）。
 cat > /app/mem-probe.cjs << 'MEMEOF'
