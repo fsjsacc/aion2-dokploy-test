@@ -86,7 +86,9 @@ fi
 # /proc/<pid>/status，而 docker.readContainerFile 能把文件读回来 ⇒ 用一条常驻采样换到
 # "谁在吃内存 + 跨过阈值的时刻 + 应用什么时候开始不回话"。
 # 约束：独立进程、任何异常只写进当行不影响应用、文件恒定只留最后 200 行（避免自己把 cgroup 撑大）。
-cat > /app/mem-probe.js << 'MEMEOF'
+# 必须是 .cjs：/app/package.json 里是 "type": "module"，写成 .js 会被当 ESM ⇒ require 直接 ReferenceError
+# （上一版就是这么死的；旁边那个 /tmp/fix-wrangler.js 能跑是因为 /tmp 下没有 package.json）。
+cat > /app/mem-probe.cjs << 'MEMEOF'
 const fs = require("fs");
 const http = require("http");
 // 落在持久卷 /app/data 上：容器重启会丢掉内存里的 rows，若只写 /app 层就永远看不到"死亡前峰值"。
@@ -146,7 +148,7 @@ tick();
 setInterval(tick, 30000);
 MEMEOF
 # stderr 必须落盘：上一版把它接到 /dev/null，采样器一启动就退出而我看不到任何原因（自己把自己弄瞎）。
-node /app/mem-probe.js >> /app/data/.mem-probe.out 2>&1 &
+node /app/mem-probe.cjs >> /app/data/.mem-probe.out 2>&1 &
 
 # 自愈看门狗（2026-09-22 从 kina-test 已验证的那版原样搬来，test 仓库 f638d3b）。
 # 背景：workerd 把自身 cgroup 撑满被内核杀掉后，PID 1 的 wrangler 既不退出也不重启子进程
