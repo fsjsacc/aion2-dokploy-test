@@ -89,8 +89,10 @@ fi
 cat > /app/mem-probe.js << 'MEMEOF'
 const fs = require("fs");
 const http = require("http");
-const OUT = "/app/.mem-probe.tsv";
-const KEEP = 200;
+// 落在持久卷 /app/data 上：容器重启会丢掉内存里的 rows，若只写 /app 层就永远看不到"死亡前峰值"。
+const OUT = "/app/data/.mem-probe.tsv";
+const KEEP = 3000;
+const BOOT = "boot\t" + new Date().toISOString();
 const num = (p) => { try { const v = fs.readFileSync(p, "utf8").trim(); return v === "max" ? "max" : (Number.isFinite(Number(v)) ? Number(v) : "?" + v.slice(0, 8)); } catch { return "-"; } };
 const topProcs = () => {
   const out = [];
@@ -116,7 +118,9 @@ const probeApp = () => new Promise((res) => {
   r.on("error", (e) => fin("E" + (e.code || e.name || "?")));
   r.on("timeout", () => { r.destroy(); fin("TIMEOUT"); });
 });
-const rows = [];
+let rows = [];
+try { rows = fs.readFileSync(OUT, "utf8").trim().split("\n").filter(Boolean).slice(-KEEP); } catch { rows = []; }
+rows.push(BOOT);
 async function tick() {
   let app = "-";
   try { app = await probeApp(); } catch { app = "Eprobe"; }
@@ -141,7 +145,8 @@ async function tick() {
 tick();
 setInterval(tick, 30000);
 MEMEOF
-node /app/mem-probe.js >/dev/null 2>&1 &
+# stderr 必须落盘：上一版把它接到 /dev/null，采样器一启动就退出而我看不到任何原因（自己把自己弄瞎）。
+node /app/mem-probe.js >> /app/data/.mem-probe.out 2>&1 &
 
 # 自愈看门狗（2026-09-22 从 kina-test 已验证的那版原样搬来，test 仓库 f638d3b）。
 # 背景：workerd 把自身 cgroup 撑满被内核杀掉后，PID 1 的 wrangler 既不退出也不重启子进程
