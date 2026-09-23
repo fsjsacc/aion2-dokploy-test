@@ -95,6 +95,17 @@ const http = require("http");
 const OUT = "/app/data/.mem-probe.tsv";
 const KEEP = 3000;
 const BOOT = "boot\t" + new Date().toISOString();
+// memory.stat 的 anon 与 file 必须分开记：只涨 anon 才是进程真的吃内存，
+// 只涨 file 是页缓存（读资产/日志也算），kernel 能回收，两者处置完全不同。
+// （09-23 教训：我先用 cur 的斜率推断"workerd 每渲染漏 8MiB"，用 12 次显式请求做因果实验直接否掉了 ——
+//  启动期的爬升不是稳态泄漏速率。）
+const stat = () => {
+  try {
+    const t = fs.readFileSync("/sys/fs/cgroup/memory.stat", "utf8");
+    const g = (k) => { const m = t.match(new RegExp("^" + k + " ([0-9]+)$", "m")); return m ? m[1] : "-"; };
+    return "anon=" + g("anon") + "\tfile=" + g("file") + "\tslab=" + g("slab");
+  } catch { return "anon=-\tfile=-\tslab=-"; }
+};
 const num = (p) => { try { const v = fs.readFileSync(p, "utf8").trim(); return v === "max" ? "max" : (Number.isFinite(Number(v)) ? Number(v) : "?" + v.slice(0, 8)); } catch { return "-"; } };
 const topProcs = () => {
   const out = [];
@@ -134,6 +145,7 @@ async function tick() {
     "max=" + num("/sys/fs/cgroup/memory.max"),
     "peak=" + num("/sys/fs/cgroup/memory.peak"),
     "swap=" + num("/sys/fs/cgroup/memory.swap.current"),
+    stat(),
     "app=" + app,
     "probeRSS_KB=" + own,
     "topKB:" + topProcs(),
