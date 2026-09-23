@@ -134,9 +134,18 @@ const probeApp = () => new Promise((res) => {
 let rows = [];
 try { rows = fs.readFileSync(OUT, "utf8").trim().split("\n").filter(Boolean).slice(-KEEP); } catch { rows = []; }
 rows.push(BOOT);
+// 自我探测要限频：实测每次首页 SSR 有约 7MiB 不被回收，而容器里已经有 healthcheck(30s) +
+// 看门狗(20s) 两个探测在灌流量。本采样器再每 30s 探一次就成了第三个来源 ⇒ 只在每第 4 拍（2 分钟）
+// 探一次，仍足以抓到"什么时候不回话"，但把我这份贡献从 2 次/分降到 0.5 次/分。
+let tickCount = 0;
 async function tick() {
   let app = "-";
-  try { app = await probeApp(); } catch { app = "Eprobe"; }
+  tickCount += 1;
+  if (tickCount % 4 === 1) {
+    try { app = await probeApp(); } catch { app = "Eprobe"; }
+  } else {
+    app = "(skip)";
+  }
   let own = 0;
   try { own = Math.round(process.memoryUsage().rss / 1024); } catch {}
   const row = [
