@@ -79,6 +79,70 @@ FIXEOF
   rm -f /tmp/fix-wrangler.js
 fi
 
+# cgroup 内存采样器（2026-09-23，**只加在 kina-dev**）：为了把"空闲也会 OOM"从猜变成可测。
+# 为什么绕这一圈：Dokploy 只读通道拿不到逐容器 RSS（application.readAppMonitoring 对 compose 服务返回 null），
+# 也没有任何 docker logs 类过程（docker.getLogs / readLogs / logs 全 "No procedure found"），
+# getEvents 的 since/until/filters 又被忽略（只有约 5 分钟窗口）。但容器内看得见 /sys/fs/cgroup/* 与
+# /proc/<pid>/status，而 docker.readContainerFile 能把文件读回来 ⇒ 用一条常驻采样换到
+# "谁在吃内存 + 跨过阈值的时刻 + 应用什么时候开始不回话"。
+# 约束：独立进程、任何异常只写进当行不影响应用、文件恒定只留最后 200 行（避免自己把 cgroup 撑大）。
+cat > /app/mem-probe.js << 'MEMEOF'
+const fs = require("fs");
+const http = require("http");
+const OUT = "/app/.mem-probe.tsv";
+const KEEP = 200;
+const num = (p) => { try { const v = fs.readFileSync(p, "utf8").trim(); return v === "max" ? "max" : (Number.isFinite(Number(v)) ? Number(v) : "?" + v.slice(0, 8)); } catch { return "-"; } };
+const topProcs = () => {
+  const out = [];
+  let ids = [];
+  try { ids = fs.readdirSync("/proc").filter((x) => /^[0-9]+$/.test(x)); } catch { return ""; }
+  for (const pid of ids) {
+    try {
+      const st = fs.readFileSync("/proc/" + pid + "/status", "utf8");
+      const rss = st.match(/^VmRSS:\s+([0-9]+) kB$/m);
+      const nm = st.match(/^Name:\s+(\S+)$/m);
+      if (rss && nm) out.push({ n: nm[1], kb: Number(rss[1]) });
+    } catch {}
+  }
+  out.sort((a, b) => b.kb - a.kb);
+  const merged = {};
+  for (const p of out) merged[p.n] = (merged[p.n] || 0) + p.kb;
+  return Object.entries(merged).sort((a, b) => b[1] - a[1]).slice(0, 4).map(([k, v]) => k + "=" + v).join(" ");
+};
+const probeApp = () => new Promise((res) => {
+  let done = false;
+  const fin = (v) => { if (!done) { done = true; res(v); } };
+  const r = http.get({ host: "127.0.0.1", port: 3001, path: "/en/", timeout: 9000 }, (x) => { x.resume(); fin(String(x.statusCode)); });
+  r.on("error", (e) => fin("E" + (e.code || e.name || "?")));
+  r.on("timeout", () => { r.destroy(); fin("TIMEOUT"); });
+});
+const rows = [];
+async function tick() {
+  let app = "-";
+  try { app = await probeApp(); } catch { app = "Eprobe"; }
+  let own = 0;
+  try { own = Math.round(process.memoryUsage().rss / 1024); } catch {}
+  const row = [
+    new Date().toISOString(),
+    "cur=" + num("/sys/fs/cgroup/memory.current"),
+    "max=" + num("/sys/fs/cgroup/memory.max"),
+    "peak=" + num("/sys/fs/cgroup/memory.peak"),
+    "swap=" + num("/sys/fs/cgroup/memory.swap.current"),
+    "app=" + app,
+    "probeRSS_KB=" + own,
+    "topKB:" + topProcs(),
+  ].join("\t");
+  rows.push(row);
+  if (rows.length > KEEP) rows.splice(0, rows.length - KEEP);
+  try { fs.writeFileSync(OUT + ".tmp", rows.join("\n") + "\n"); fs.renameSync(OUT + ".tmp", OUT); } catch (e) {
+    try { fs.writeFileSync("/tmp/mem-probe.err", new Date().toISOString() + " " + String((e && e.message) || e)); } catch {}
+  }
+}
+tick();
+setInterval(tick, 30000);
+MEMEOF
+node /app/mem-probe.js >/dev/null 2>&1 &
+
 # 自愈看门狗（2026-09-22 从 kina-test 已验证的那版原样搬来，test 仓库 f638d3b）。
 # 背景：workerd 把自身 cgroup 撑满被内核杀掉后，PID 1 的 wrangler 既不退出也不重启子进程
 # ⇒ 容器停在 "running 但零服务" 的僵尸态（09-22 实测：连续超时、日志全静默、不自愈；
