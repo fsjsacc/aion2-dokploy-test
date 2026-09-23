@@ -140,20 +140,23 @@ const probeStatic = () => probePath("/llms.txt");
 let rows = [];
 try { rows = fs.readFileSync(OUT, "utf8").trim().split("\n").filter(Boolean).slice(-KEEP); } catch { rows = []; }
 rows.push(BOOT);
-// 自我探测要限频：实测每次首页 SSR 有约 7MiB 不被回收，而容器里已经有 healthcheck(30s) +
-// 看门狗(20s) 两个探测在灌流量。本采样器再每 30s 探一次就成了第三个来源 ⇒ 只在每第 4 拍（2 分钟）
-// 探一次，仍足以抓到"什么时候不回话"，但把我这份贡献从 2 次/分降到 0.5 次/分。
+// 自我探测要限频：实测每次首页 SSR 有约 6MiB 不被回收，而容器里已经有 healthcheck(30s ≈2 次/分) +
+// 看门狗(20s ≈2.6 次/分) 两个探测在灌流量。原先本采样器每第 4 拍（2 分钟）才探一次 ⇒ 我这份只占 0.5 次/分，
+// 但**判决分辨率不够**：09-23 实测僵尸窗口（workerd 被杀到看门狗重启）只有 ~2 分钟，2 分钟一拍的配对
+// 样本很可能一次都不落在窗口里 ⇒ 候选⑤ 永远出不了结论。
+// 现在改成：**静态每拍都探**（不走 SSR ⇒ 零内存代价，且它才是候选⑤ 的自变量），
+// **首页探活改成每第 2 拍（1 分钟）** ⇒ 我这份从 0.5 升到 1.0 次/分（总负载 5.1→5.6 次/分，寿命只短约 4 分），
+// 换来僵尸窗口内稳定有 ~2 个 app/static 配对样本。
 let tickCount = 0;
 async function tick() {
   let app = "-";
   let st = "-";
   tickCount += 1;
-  if (tickCount % 4 === 1) {
+  try { st = await probeStatic(); } catch { st = "Eprobe"; }
+  if (tickCount % 2 === 1) {
     try { app = await probeApp(); } catch { app = "Eprobe"; }
-    try { st = await probeStatic(); } catch { st = "Eprobe"; }
   } else {
     app = "(skip)";
-    st = "(skip)";
   }
   let own = 0;
   try { own = Math.round(process.memoryUsage().rss / 1024); } catch {}
