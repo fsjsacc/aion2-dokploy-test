@@ -124,13 +124,19 @@ const topProcs = () => {
   for (const p of out) merged[p.n] = (merged[p.n] || 0) + p.kb;
   return Object.entries(merged).sort((a, b) => b[1] - a[1]).slice(0, 4).map(([k, v]) => k + "=" + v).join(" ");
 };
-const probeApp = () => new Promise((res) => {
+const probePath = (p) => new Promise((res) => {
   let done = false;
   const fin = (v) => { if (!done) { done = true; res(v); } };
-  const r = http.get({ host: "127.0.0.1", port: 3001, path: "/en/", timeout: 9000 }, (x) => { x.resume(); fin(String(x.statusCode)); });
+  const r = http.get({ host: "127.0.0.1", port: 3001, path: p, timeout: 9000 }, (x) => { x.resume(); fin(String(x.statusCode)); });
   r.on("error", (e) => fin("E" + (e.code || e.name || "?")));
   r.on("timeout", () => { r.destroy(); fin("TIMEOUT"); });
 });
+const probeApp = () => probePath("/en/");
+// 容器**内**直连 3001 探一次静态资源：这是候选⑤唯一有效的仪器。
+// 从外面探是被 Traefik 挡在门外的 —— 09-23 02:40 实测：容器被 Docker 判 unhealthy 的那一刻，
+// 外部对 /favicon.ico 的请求变成 19 字节的 Traefik 404，看不出应用自己的 asset 路还活不活。
+// 静态请求不走 SSR ⇒ 不贡献那 ≈6 MiB/次 的自伤，所以跟着现有节拍一起发即可。
+const probeStatic = () => probePath("/llms.txt");
 let rows = [];
 try { rows = fs.readFileSync(OUT, "utf8").trim().split("\n").filter(Boolean).slice(-KEEP); } catch { rows = []; }
 rows.push(BOOT);
@@ -140,11 +146,14 @@ rows.push(BOOT);
 let tickCount = 0;
 async function tick() {
   let app = "-";
+  let st = "-";
   tickCount += 1;
   if (tickCount % 4 === 1) {
     try { app = await probeApp(); } catch { app = "Eprobe"; }
+    try { st = await probeStatic(); } catch { st = "Eprobe"; }
   } else {
     app = "(skip)";
+    st = "(skip)";
   }
   let own = 0;
   try { own = Math.round(process.memoryUsage().rss / 1024); } catch {}
@@ -156,6 +165,7 @@ async function tick() {
     "swap=" + num("/sys/fs/cgroup/memory.swap.current"),
     stat(),
     "app=" + app,
+    "static=" + st,
     "probeRSS_KB=" + own,
     "topKB:" + topProcs(),
   ].join("\t");
